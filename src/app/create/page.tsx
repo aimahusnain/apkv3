@@ -210,6 +210,8 @@ export default function Create() {
                             </option>
                             {control.options.map((optionItem) => (
                               <option
+                              key={optionItem.value}  // Add unique key prop here
+
                                 id={optionItem.value}
                                 value={optionItem.value}
                               >
