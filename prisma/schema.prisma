@@ -1,0 +1,22 @@
+// This is your Prisma schema file for PostgreSQL
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Post {
+    id          String @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  description String
+  image       String
+  category    String
+  userid      String
+  userimage   String
+  comments    String[]
+  isFeatured  Boolean   @default(false)
+}
