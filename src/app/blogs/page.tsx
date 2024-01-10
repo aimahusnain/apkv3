@@ -16,7 +16,7 @@ async function extractAllBlogs() {
   if (data.success) return data.data;
 }
 
-export default function Blogs() {
+export default async function Blogs() {
   const blogPostsList = await extractAllBlogs();
 
   return <BlogList lists={blogPostsList} />;
