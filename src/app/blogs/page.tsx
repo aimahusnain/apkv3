@@ -1,19 +1,23 @@
 import BlogList from "@/components/blogs/blog-list";
 
 async function extractAllBlogs() {
-    const res = await fetch(`/api/blog-post/get-all-post`, {
-      method: "GET",
-      cache: "no-store",
-    });
-  
-    const data = await res.json();
-  
-    if (data.success) return data.data;
+  if (process.env.NODE_ENV === 'production') {
+    // Handle logic for static generation
+    return [];
   }
-  
-  export default async function Blogs(){
 
-    const blogPostsList = await extractAllBlogs();
+  const res = await fetch(`/api/blog-post/get-all-post`, {
+    method: "GET",
+    cache: "no-store",
+  });
 
-    return( <BlogList lists={blogPostsList}/> )
-  }
+  const data = await res.json();
+
+  if (data.success) return data.data;
+}
+
+export default function Blogs() {
+  const blogPostsList = await extractAllBlogs();
+
+  return <BlogList lists={blogPostsList} />;
+}
