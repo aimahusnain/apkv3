@@ -92,7 +92,7 @@ export default function Create() {
   async function handleSaveBlogPost() {
     console.log(formData);
 
-    const res = await fetch("/api/blog-post/add-post", {
+    const res = await fetch("URL/api/blog-post/add-post", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

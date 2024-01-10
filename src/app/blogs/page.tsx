@@ -6,7 +6,7 @@ async function extractAllBlogs() {
     return [];
   }
 
-  const res = await fetch(`/api/blog-post/get-all-post`, {
+  const res = await fetch(`${process.env.URL}/api/blog-post/get-all-post`, {
     method: "GET",
     cache: "no-store",
   });
