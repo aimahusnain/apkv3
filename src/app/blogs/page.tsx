@@ -1,10 +1,6 @@
 import BlogList from "@/components/blogs/blog-list";
 
 async function extractAllBlogs() {
-  if (process.env.NODE_ENV === 'production') {
-    // Handle logic for static generation
-    return [];
-  }
 
   const res = await fetch(`${process.env.URL}/api/blog-post/get-all-post`, {
     method: "GET",
