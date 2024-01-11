@@ -6,11 +6,18 @@ export async function GET(req: NextRequest) {
     const url = new URL(req.url);
     const blogID = url.searchParams.get("blogID");
 
-    const blogDetails = await prisma.post.findFirst({
+    const blogDetails = await prisma.post.findUnique({
       where: {
         id: String(blogID),
       },
     });
+    
+    if (!blogID) {
+      return NextResponse.json({
+        success: false,
+        message: "Invalid or missing blog ID",
+      });
+    }
 
     if (blogDetails) {
       return NextResponse.json({
@@ -20,7 +27,7 @@ export async function GET(req: NextRequest) {
     } else {
       return NextResponse.json({
         success: false,
-        message: "Failed to fetch the blog details ! Please try again",
+        message: "Failed to fetch the blog details! Please try again",
       });
     }
   } catch (e) {
@@ -28,7 +35,7 @@ export async function GET(req: NextRequest) {
 
     return NextResponse.json({
       success: false,
-      message: "Something went wrong ! Please try again",
+      message: "Something went wrong! Please try again",
     });
   }
 }
