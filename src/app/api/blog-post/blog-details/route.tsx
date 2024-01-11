@@ -6,9 +6,9 @@ export async function GET(req: NextRequest) {
     const url = new URL(req.url);
     const blogID = url.searchParams.get("blogID");
 
-    const blogDetails = await prisma.post.findUnique({
+    const blogDetails = await prisma.post.findUniqueOrThrow({
       where: {
-        id: String(blogID), // Convert blogID to a string
+        id: String(blogID),
       },
     });
 
@@ -20,7 +20,7 @@ export async function GET(req: NextRequest) {
     } else {
       return NextResponse.json({
         success: false,
-        message: "Failed to fetch the blog details! Please try again",
+        message: "Failed to fetch the blog details ! Please try again",
       });
     }
   } catch (e) {
@@ -28,7 +28,7 @@ export async function GET(req: NextRequest) {
 
     return NextResponse.json({
       success: false,
-      message: "Something went wrong! Please try again",
+      message: "Something went wrong ! Please try again",
     });
   }
 }
