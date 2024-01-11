@@ -1,24 +1,16 @@
 import prisma from "@/database";
-import { NextRequest, NextResponse } from "next/server";
+import { NextApiRequest, NextApiResponse } from "next";
 
-export async function GET(request: NextRequest) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const { url } = request;
-
-    if (!url) {
-      return NextResponse.json({
-        success: false,
-        message: "Invalid request URL",
-      });
-    }
-
-    const { searchParams } = new URL(url);
-    const extractCategoryID = searchParams.get("categoryID");
+    const extractCategoryID = req.query.categoryID as string | undefined;
+    console.log('Category ID:', extractCategoryID);
 
     if (!extractCategoryID) {
-      return NextResponse.json({
+      console.log('Missing category ID in the request query');
+      return res.status(400).json({
         success: false,
-        message: "Missing category ID in the request URL",
+        message: "Missing category ID in the request query",
       });
     }
 
@@ -29,12 +21,14 @@ export async function GET(request: NextRequest) {
     });
 
     if (getBlogPostListBasedOnCurrentCategoryID.length > 0) {
-      return NextResponse.json({
+      console.log('Data fetched successfully:', getBlogPostListBasedOnCurrentCategoryID);
+      return res.status(200).json({
         success: true,
         data: getBlogPostListBasedOnCurrentCategoryID,
       });
     } else {
-      return NextResponse.json({
+      console.log('No data found for the given category ID');
+      return res.status(404).json({
         success: false,
         message: "No data found for the given category ID",
       });
@@ -42,7 +36,7 @@ export async function GET(request: NextRequest) {
   } catch (error) {
     console.error(error);
 
-    return NextResponse.json({
+    return res.status(500).json({
       success: false,
       message: "Something went wrong! Please try again",
     });
