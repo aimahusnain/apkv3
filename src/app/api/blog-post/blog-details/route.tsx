@@ -6,7 +6,7 @@ export async function GET(req: NextRequest) {
     const url = new URL(req.url);
     const blogID = url.searchParams.get("blogID");
 
-    const blogDetails = await prisma.post.findUniqueOrThrow({
+    const blogDetails = await prisma.post.findFirst({
       where: {
         id: String(blogID),
       },
