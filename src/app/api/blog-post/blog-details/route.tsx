@@ -1,23 +1,28 @@
 import prisma from "@/database";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(req: NextRequest) {
-  try {
-    const url = new URL(req.url);
-    const blogID = url.searchParams.get("blogID");
+interface CustomRequest extends NextRequest {
+  query: {
+    blogID?: string;
+  };
+}
 
-    const blogDetails = await prisma.post.findUnique({
-      where: {
-        id: String(blogID),
-      },
-    });
-    
+export async function GET(req: CustomRequest) {
+  try {
+    const blogID = req.query.blogID;
+
     if (!blogID) {
       return NextResponse.json({
         success: false,
         message: "Invalid or missing blog ID",
       });
     }
+
+    const blogDetails = await prisma.post.findUnique({
+      where: {
+        id: String(blogID),
+      },
+    });
 
     if (blogDetails) {
       return NextResponse.json({
