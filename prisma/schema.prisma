@@ -10,7 +10,7 @@ datasource db {
 }
 
 model Post {
-  id          BigInt @id @default(autoincrement())
+  id          Int      @id
   title       String
   description String
   image       String
@@ -20,6 +20,3 @@ model Post {
   comments    String[]
   isFeatured  Boolean   @default(false)
 }
-
-
-
