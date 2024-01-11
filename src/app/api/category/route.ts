@@ -3,12 +3,28 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url);
+    const { url } = request;
+
+    if (!url) {
+      return NextResponse.json({
+        success: false,
+        message: "Invalid request URL",
+      });
+    }
+
+    const { searchParams } = new URL(url);
     const extractCategoryID = searchParams.get("categoryID");
+
+    if (!extractCategoryID) {
+      return NextResponse.json({
+        success: false,
+        message: "Missing category ID in the request URL",
+      });
+    }
 
     const getBlogPostListBasedOnCurrentCategoryID = await prisma.post.findMany({
       where: {
-        category: extractCategoryID || "",
+        category: extractCategoryID,
       },
     });
 
