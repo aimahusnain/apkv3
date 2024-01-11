@@ -20,3 +20,6 @@ model Post {
   comments    String[]
   isFeatured  Boolean   @default(false)
 }
+
+
+
