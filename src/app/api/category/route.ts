@@ -12,7 +12,7 @@ export async function GET(request: NextRequest) {
       },
     });
 
-    if (getBlogPostListBasedOnCurrentCategoryID) {
+    if (getBlogPostListBasedOnCurrentCategoryID.length > 0) {
       return NextResponse.json({
         success: true,
         data: getBlogPostListBasedOnCurrentCategoryID,
@@ -20,15 +20,15 @@ export async function GET(request: NextRequest) {
     } else {
       return NextResponse.json({
         success: false,
-        message: "Failed to fetch data ! Please try again",
+        message: "No data found for the given category ID",
       });
     }
   } catch (error) {
-    console.log(error);
+    console.error(error);
 
     return NextResponse.json({
       success: false,
-      message: "Something went wrong ! Please try again",
+      message: "Something went wrong! Please try again",
     });
   }
 }

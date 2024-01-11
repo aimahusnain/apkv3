@@ -4,7 +4,6 @@ import CategoryList from "@/components/category";
 async function getAllListsByCategory(getId: string) {
   const res = await fetch(`${process.env.URL}/api/category?categoryID=${getId}`, {
     method: "GET",
-    cache: "no-store",
   });
 
   const data = await res.json();
