@@ -5,15 +5,12 @@ export async function GET(req: NextRequest) {
   try {
     const url = new URL(req.url);
     const blogID = url.searchParams.get("blogID");
-    
+
     const blogDetails = await prisma.post.findUnique({
       where: {
         id: String(blogID),
       },
     });
-    
-    console.log("Prisma Query Result:", blogDetails);
-    
     
     if (!blogID) {
       return NextResponse.json({

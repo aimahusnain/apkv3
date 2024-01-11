@@ -9,9 +9,6 @@ async function extractBlogDetails(id: string) {
     `${process.env.URL}/api/blog-post/blog-details?blogID=${id}`,
     {
       method: "GET",
-      next : {
-        revalidate : 0
-      }
     }
   );
 
