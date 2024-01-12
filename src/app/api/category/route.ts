@@ -1,12 +1,11 @@
 export const dynamic = 'force-dynamic'
-
-import prisma from "@/lib/databases/prisma";
+import prisma from "@/database";
 import { NextRequest, NextResponse } from "next/server";
 
 export const GET = async (request: NextRequest) => {
   try {
     const { searchParams } = new URL(request.url)
-    const getCategoryId = searchParams.get('categoryID')
+    const getCategoryId = searchParams.get('categoryId')
 
     const getPostsFromCategoryId = await prisma.post.findMany({
       where: {
