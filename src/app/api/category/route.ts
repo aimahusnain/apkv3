@@ -1,44 +1,35 @@
-import prisma from "@/database";
-import { NextApiRequest, NextApiResponse } from "next";
+export const dynamic = 'force-dynamic'
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+import prisma from "@/lib/databases/prisma";
+import { NextRequest, NextResponse } from "next/server";
+
+export const GET = async (request: NextRequest) => {
   try {
-    const extractCategoryID = req.query.categoryID as string | undefined;
-    console.log('Category ID:', extractCategoryID);
+    const { searchParams } = new URL(request.url)
+    const getCategoryId = searchParams.get('categoryID')
 
-    if (!extractCategoryID) {
-      console.log('Missing category ID in the request query');
-      return res.status(400).json({
-        success: false,
-        message: "Missing category ID in the request query",
-      });
-    }
-
-    const getBlogPostListBasedOnCurrentCategoryID = await prisma.post.findMany({
+    const getPostsFromCategoryId = await prisma.post.findMany({
       where: {
-        category: extractCategoryID,
-      },
-    });
+        category: getCategoryId || ''
+      }
+    })
 
-    if (getBlogPostListBasedOnCurrentCategoryID.length > 0) {
-      console.log('Data fetched successfully:', getBlogPostListBasedOnCurrentCategoryID);
-      return res.status(200).json({
+    if (getPostsFromCategoryId) {
+      return NextResponse.json({
         success: true,
-        data: getBlogPostListBasedOnCurrentCategoryID,
-      });
+        data: getPostsFromCategoryId
+      })
     } else {
-      console.log('No data found for the given category ID');
-      return res.status(404).json({
+      return NextResponse.json({
         success: false,
-        message: "No data found for the given category ID",
-      });
+        message: 'Failed to fetch data!'
+      })
     }
   } catch (error) {
-    console.error(error);
-
-    return res.status(500).json({
+    console.log(error)
+    return NextResponse.json({
       success: false,
-      message: "Something went wrong! Please try again",
-    });
+      message: 'Something went wrong, please try again!'
+    })
   }
 }
