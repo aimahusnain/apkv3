@@ -1,34 +1,35 @@
+export const dynamic = 'force-dynamic'
+
 import prisma from "@/database";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(request: NextRequest) {
+export const GET = async (request: NextRequest) => {
   try {
-    const { searchParams } = new URL(request.url);
-    const extractCategoryID = searchParams.get("categoryID");
+    const { searchParams } = new URL(request.url)
+    const getCategoryId = searchParams.get('categoryId')
 
-    const getBlogPostListBasedOnCurrentCategoryID = await prisma.post.findMany({
+    const getPostsFromCategoryId = await prisma.post.findMany({
       where: {
-        category: extractCategoryID || "",
-      },
-    });
+        category: getCategoryId || ''
+      }
+    })
 
-    if (getBlogPostListBasedOnCurrentCategoryID) {
+    if (getPostsFromCategoryId) {
       return NextResponse.json({
         success: true,
-        data: getBlogPostListBasedOnCurrentCategoryID,
-      });
+        data: getPostsFromCategoryId
+      })
     } else {
       return NextResponse.json({
         success: false,
-        message: "Failed to fetch data ! Please try again",
-      });
+        message: 'Failed to fetch data!'
+      })
     }
   } catch (error) {
-    console.log(error);
-
+    console.log(error)
     return NextResponse.json({
       success: false,
-      message: "Something went wrong ! Please try again",
-    });
+      message: 'Something went wrong, please try again!'
+    })
   }
 }
