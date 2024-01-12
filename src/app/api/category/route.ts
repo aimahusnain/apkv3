@@ -6,11 +6,11 @@ import { NextRequest, NextResponse } from "next/server";
 export const GET = async (request: NextRequest) => {
   try {
     const { searchParams } = new URL(request.url)
-    const getCategoryId = searchParams.get('categoryId')
+    const getCategoryId = searchParams.get('categoryID')
 
     const getPostsFromCategoryId = await prisma.post.findMany({
       where: {
-        category: getCategoryId || ''
+        category: getCategoryId || 'no data'
       }
     })
 
