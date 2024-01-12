@@ -1,7 +1,7 @@
 import prisma from "@/database";
 import { NextRequest, NextResponse } from "next/server";
 
-export const GET = async (request: NextRequest) => {
+export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
     const extractCategoryID = searchParams.get("categoryID");
