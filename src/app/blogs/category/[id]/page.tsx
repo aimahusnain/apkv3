@@ -2,7 +2,8 @@ import BlogList from "@/components/blogs/blog-list";
 import CategoryList from "@/components/category";
 
 async function getAllListsByCategory(getId: string) {
-  const res = await fetch(`${process.env.URL}/api/category?categoryId=${getId}`, {
+  const lowercaseId = getId.toLowerCase();  // Convert id to lowercase
+  const res = await fetch(`${process.env.URL}/api/category?categoryId=${lowercaseId}`, {
     method: "GET",
   });
 
