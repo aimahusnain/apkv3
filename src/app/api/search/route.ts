@@ -1,41 +1,42 @@
+export const dynamic = 'force-dynamic'
+
 import prisma from "@/database";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(req: NextRequest) {
+export const GET = async (request: NextRequest) => {
   try {
-    const url = new URL(req.url);
-    const extractQuery = url.searchParams.get("query");
+    const { searchParams } = new URL(request.url)
+    const getQuery = searchParams.get('query')
 
-    const searchPostList = await prisma.post.findMany({
+    const getPostsFromQuery = await prisma.post.findMany({
       where: {
         OR: [
           {
-            title: extractQuery ? {
-              contains: extractQuery,
+            title: getQuery ? {
+              contains: getQuery,
               mode: "insensitive",
             } : undefined,
           },
-        ],
-      },
-    });
+        ]
+      }
+    })
 
-    if (searchPostList) {
+    if (getPostsFromQuery) {
       return NextResponse.json({
         success: true,
-        data: searchPostList,
-      });
+        data: getPostsFromQuery
+      })
     } else {
       return NextResponse.json({
         success: false,
-        message: "Failed to search results",
-      });
+        message: 'Failed to search posts!'
+      })
     }
-  } catch (e) {
-    console.log(e);
-
+  } catch (error) {
+    console.log(error)
     return NextResponse.json({
       success: false,
-      message: "Something went wrong! Please try again",
-    });
+      message: 'Something went wrong, please try again!'
+    })
   }
 }
