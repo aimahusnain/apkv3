@@ -91,8 +91,7 @@ export default function Create() {
 
   async function handleSaveBlogPost() {
     console.log(formData);
-
-      const res = await fetch(`http://localhost:3000/api/blog-post/add-post`, {
+      const res = await fetch(`https://apkv4.vercel.app/api/blog-post/add-post`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
