@@ -1,6 +1,5 @@
 import prisma from "@/database";
 import { NextRequest, NextResponse } from "next/server";
-import { Prisma } from "@prisma/client"; // Import Prisma types if not imported
 
 export async function GET(req: NextRequest) {
   try {
@@ -12,8 +11,8 @@ export async function GET(req: NextRequest) {
         OR: [
           {
             title: extractQuery ? {
-              contains: extractQuery, // Use contains directly without mode or value
-              mode: "insensitive", // Add mode for case-insensitive search
+              contains: extractQuery,
+              mode: "insensitive",
             } : undefined,
           },
         ],
