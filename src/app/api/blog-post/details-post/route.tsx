@@ -1,34 +1,35 @@
+export const dynamic = 'force-dynamic'
+
 import prisma from "@/database";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(req: NextRequest) {
+export const GET = async (request: NextRequest) => {
   try {
-    const url = new URL(req.url);
-    const blogID = url.searchParams.get("blogID");
+    const { searchParams } = new URL(request.url)
+    const getPostId = searchParams.get('blogID')
 
-    const blogDetails = await prisma.post.findUnique({
+    const detailPost = await prisma.post.findUnique({
       where: {
-        id: String(blogID),
-      },
-    });
+        id: String(getPostId)
+      }
+    })
 
-    if (blogDetails) {
+    if (detailPost) {
       return NextResponse.json({
         success: true,
-        data: blogDetails,
-      });
+        data: detailPost
+      })
     } else {
       return NextResponse.json({
         success: false,
-        message: "Failed to fetch the blog details! Please try again",
-      });
+        message: 'Failed to fetch post!'
+      })
     }
-  } catch (e) {
-    console.log(e);
-
+  } catch (error) {
+    console.log(error)
     return NextResponse.json({
       success: false,
-      message: "Something went wrong! Please try again",
-    });
+      message: 'Something went wrong, please try again!'
+    })
   }
 }
