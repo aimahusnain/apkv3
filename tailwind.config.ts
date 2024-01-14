@@ -12,16 +12,6 @@ module.exports = {
       center: true,
       padding: "1rem",
     },
-    colors: {
-      current: "currentColor",
-      transparent: "transparent",
-      white: "#FFFFFF",
-      black: "#090E34",
-      dark: "#1D2144",
-      primary: "#2daafc",
-      yellow: "#FBB040",
-      "body-color": "#959CB1",
-    },
     screens: {
       xs: "450px",
       sm: "575px",
@@ -32,6 +22,14 @@ module.exports = {
     },
     extend: {
       colors: {
+        current: "currentColor",
+        transparent: "transparent",
+        white: "#FFFFFF",
+        black: "#090E34",
+        dark: "#1D2144",
+        primary: "#2daafc",
+        yellow: "#FBB040",
+        "body-color": "#959CB1",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

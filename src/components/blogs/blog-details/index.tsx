@@ -1,12 +1,14 @@
 "use client";
 
-import Button from "@/components/button";
 import { Blog } from "@/utils/types";
+import { Facebook, LucideTwitter } from "lucide-react";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Download } from 'lucide-react';
 
 export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
   console.log(blogData, "blogData");
@@ -20,16 +22,19 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
 
     extractComments.push(`${comment}|${session?.user?.name}`);
 
-    const response = await fetch(`${process.env.URL}/api/blog-post/update-post`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        id: blogData?.id,
-        comments: extractComments,
-      }),
-    });
+    const response = await fetch(
+      `${process.env.URL}/api/blog-post/update-post`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          id: blogData?.id,
+          comments: extractComments,
+        }),
+      }
+    );
 
     const data = await response.json();
 
@@ -55,6 +60,209 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
 
   return (
     <>
+      <div className="w-full h-full">
+        {/* Top Title Sectoin */}
+        <div className="my-32 px-16 flex gap-8 flex-col">
+          {/* <!-- Breadcrumb --> */}
+          <nav className="flex text-black rounded-lg">
+            <ol className="inline-flex items-center space-x-1">
+              <li className="inline-flex items-center">
+                <Link
+                  href="/"
+                  className="inline-flex items-center text-sm font-medium dark:hover:text-white dark:text-zinc-400 text-zinc-700 hover:text-blue-600"
+                >
+                  <svg
+                    className="w-3 h-3 me-2.5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
+                  </svg>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <div className="flex items-center">
+                  <svg
+                    className="rtl:rotate-180 block w-3 h-3 mx-1 text-zinc-400"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 6 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 9 4-4-4-4"
+                    />
+                  </svg>
+                  <a
+                    href="/games"
+                    className="ms-1 text-sm font-medium text-zinc-700 hover:text-blue-600 md:ms-2 dark:text-zinc-400 dark:hover:text-white"
+                  >
+                    Games
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div className="flex items-center">
+                  <svg
+                    className="rtl:rotate-180 block w-3 h-3 mx-1 text-zinc-400"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 6 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 9 4-4-4-4"
+                    />
+                  </svg>
+                  <a
+                    href="#"
+                    className="ms-1 text-sm font-medium text-zinc-700 hover:text-blue-600 md:ms-2 dark:text-zinc-400 dark:hover:text-white"
+                  >
+                    Casual
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div className="flex items-center">
+                  <svg
+                    className="rtl:rotate-180 w-3 h-3 mx-1 text-zinc-400"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 6 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 9 4-4-4-4"
+                    />
+                  </svg>
+                  <span className="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-zinc-400">
+                    Animash
+                  </span>
+                </div>
+              </li>
+            </ol>
+          </nav>
+          <div className="flex flex-wrap gap-4 w-full justify-between items-center">
+            <div className="flex gap-4">
+            <img
+              className="rounded-3xl aspect-square object-cover"
+              width={100}
+              height={100}
+              src={blogData?.image || ""}
+              alt={blogData.title}
+              />
+            <div className="flex flex-col">
+            <h1 className="text-xl font-bold">{blogData?.title}</h1>
+            <p className="text-md">
+            ⭐⭐⭐⭐⭐
+            </p>
+            </div>
+              </div>
+            <Button className="rounded-full bg-primary text-white h-full w-fit py-4 font-bold px-8"><Download /> Download Now</Button>
+          </div>
+        </div>
+        {/* Information */}
+        <div></div>
+        {/* Blog Text */}
+        <div></div>
+        {/* Comments */}
+        <div></div>
+      </div>
+
+      <div className="w-full h-full">
+        <div className="flex flex-row m-20 gap-6 shadow-2xl">
+          <img
+            className="rounded-2xl max-h-[200px] object-cover"
+            width={180}
+            src={blogData?.image || ""}
+            alt={blogData.title}
+          />
+          <div className="flex flex-col">
+            <div className="flex flex-row gap-3 mb-1 text-zinc-300 font-bold">
+              <a
+                href="/"
+                className="p-0 hover:underline underline-green-500 border-[#68CB5B] text-[#68CB5B]"
+              >
+                Home
+              </a>
+              /
+              <a
+                href="/"
+                className="p-0 hover:underline underline-green-500 border-[#68CB5B] text-[#68CB5B]"
+              >
+                Games
+              </a>
+              /
+              <a
+                href="/"
+                className="p-0 hover:underline underline-green-500 border-[#68CB5B] text-[#68CB5B]"
+              >
+                Role Playing
+              </a>
+              /
+              <Link
+                className="inline-flex items-center justify-center rounded-full bg-primary py-2 px-4 text-sm font-semibold text-white"
+                href={`blogs/category/${blogData?.category}`}
+              >
+                {blogData?.category}
+              </Link>
+            </div>
+
+            <h1 className="text-2xl font-bold">{blogData?.title}</h1>
+
+            <span className="text-gray-500 text-sm mt-2">
+              {/* add a link of website */}
+              {/* {blog.description} */}
+            </span>
+
+            <p className="mt-2 text-gray-600 text-sm">
+              {blogData?.description}
+            </p>
+
+            <div className="flex gap-5 p-3">
+              <Link href="/" className="w-5 h-7">
+                <Facebook className="w-full h-full hover:text-emerald-500 transition-all" />
+              </Link>
+              <Link href="/" className="w-5 h-7">
+                <LucideTwitter className="w-full h-full hover:text-emerald-500 transition-all" />
+              </Link>
+              <Link href="/" className="w-5 h-7">
+                {/* <FaXTwitter className="w-full h-full hover:text-emerald-500 transition-all" /> */}
+              </Link>
+              <Link href="/" className="w-5 h-7">
+                {/* <FaWhatsapp className="w-full h-full hover:text-emerald-500 transition-all" /> */}
+              </Link>
+            </div>
+            <Button className="transition-all hover:bg-emerald-700 p-3 bg-emerald-500 text-white font-bold uppercase text-xl rounded-md mt-3">
+              Download
+            </Button>
+          </div>
+        </div>
+        <div>
+          {/* Make Blog Details */}
+          {/* <BlogDetails blog={blog} slug={blogData.slug} /> */}
+          <div className="w-full h-fit flex justify-center items-center">
+            <Button className="transition-all px-12 mt-6 hover:bg-emerald-700 p-3 bg-emerald-500 text-white font-bold uppercase text-xl rounded-full">
+              Download
+            </Button>
+          </div>
+        </div>
+      </div>
       <section className="pt-[150px] pb-[120px]">
         <div className="container">
           <div className="-mx-4 flex flex-col gap-4 items-center justify-center">
@@ -101,7 +309,10 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                       />
                     </div>
                   </div>
-                  <p className="mb-8 leading-relaxed text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg" style={{ wordWrap: 'break-word' }}>
+                  <p
+                    className="mb-8 leading-relaxed text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg"
+                    style={{ wordWrap: "break-word" }}
+                  >
                     {blogData?.description}
                   </p>
                 </div>
@@ -112,7 +323,7 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                 <>
                   <input
                     name="comment"
-                    id="comment"  
+                    id="comment"
                     autoFocus
                     autoComplete="off"
                     placeholder="Add comment here"
@@ -122,7 +333,7 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                     }
                     className="w-full rounded-md border border-transparent py-3 px-6 text-base text-body-color placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
                   />
-                  <Button text="Add" onClick={handleCommentSave} />
+                  <Button onClick={handleCommentSave}>Add</Button>
                 </>
               ) : null}
             </div>
@@ -134,7 +345,10 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
               </div>
               {blogData && blogData.comments && blogData.comments.length > 0
                 ? blogData.comments.map((comment, index) => (
-                    <div key={index} className="p-6 text-base rounded-lg dark:bg-gray-900">
+                    <div
+                      key={index}
+                      className="p-6 text-base rounded-lg dark:bg-gray-900"
+                    >
                       <div className="flex justify-between items-center mb-2">
                         <div className="flex items-center">
                           <p className="inline-flex items-center mr-3 text-sm text-black dark:text-white font-semibold">

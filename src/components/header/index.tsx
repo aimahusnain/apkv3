@@ -44,7 +44,7 @@ export default function Header() {
         className={`top-0 left-0 z-40 flex w-full items-center bg-transparent
         ${
           sticky
-            ? "!fixed inset-x-0 border-gray-200 bg-white/75 dark:bg-white/0 backdrop-blur-lg transition-all dark:shadow-none dark:backdrop-blur-none !z-[9999] bg-gradient-to-b from-white/40 dark:from-black via-indigo-700 to-transparent"
+            ? "!fixed inset-x-0 border-gray-200 bg-white/75 dark:bg-white/0 backdrop-blur-lg transition-all dark:shadow-none dark:backdrop-blur-none !z-[9999] from-white/40 dark:from-black to-transparent"
             : "absolute"
         }
         `}
