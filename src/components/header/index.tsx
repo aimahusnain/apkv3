@@ -58,7 +58,7 @@ export default function Header() {
                     ${sticky ? "py-5 lg:py-2" : "py-8"}
                     `}
               >
-                <svg id="Layer_1" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="170px" height="41px" viewBox="0 0 1024 251" fill="white">
+                <svg id="Layer_1" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="170px" height="41px" viewBox="0 0 1024 251" fill="black" className="dark:fill-white">
       
     <path d="M49.3,60c-0.1-0.3-0.2-0.5-0.4-0.7c-0.2-0.2-0.4-0.3-0.7-0.3c-5.2-0.9-10.5-0.9-15.7,0
       c-0.3,0.1-0.5,0.2-0.7,0.4c-0.2,0.2-0.4,0.4-0.5,0.6L0,154.9c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0.1,0.2c0,0,0.1,0.1,0.1,0.1

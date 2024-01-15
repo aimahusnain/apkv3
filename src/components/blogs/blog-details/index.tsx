@@ -92,7 +92,7 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
 
         <div>
         <div className="absolute p-7">
-        <h1>Alight Motion MOD APK 2024 with Pro Features, No Watermark, and Ad-Free Experience!</h1>
+        <h1>{blogData?.title}</h1>
         </div>
           <img
             src="/bg.png"
