@@ -62,7 +62,7 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
   return (
     <>
       <div>
-        <div className="absolute">
+        <div className="absolute -mt-8">
           <video
             className="mix-blend-screen w-full object-cover z-0 hidden md:block glitch"
             autoPlay
@@ -82,7 +82,7 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
             <source src="/mobile_landing.mp4" type="video/mp4" />{" "}
           </video>
         </div>
-        <div className="w-full md:h-[600px] h-[400px] shadow-xl shadow-[#000]">
+        <div className="w-full md:h-[450px] h-[400px] shadow-xl shadow-[#000]">
           <img
             src="/download.jpg"
             className="object-cover h-full w-screen"
