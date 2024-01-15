@@ -9,7 +9,7 @@ export default function ThemeToggler() {
   const { theme, setTheme } = useTheme();
 
   React.useEffect(() => {
-    setTheme("light");
+    setTheme("dark");
   }, []);
 
   return (

@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`min-h-screen font-sans ${inter.className}`}>
+      <body className={`min-h-screen font-sans dark:bg-black ${inter.className}`}>
         <NextThemeProvider>
           <NextAuthProvider>
             <GlobalState>

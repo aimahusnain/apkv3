@@ -22,12 +22,12 @@ module.exports = {
     },
     extend: {
       colors: {
+        alightdarkbg: '#1D2238',
         current: "currentColor",
         transparent: "transparent",
         white: "#FFFFFF",
-        black: "#090E34",
         dark: "#1D2144",
-        primary: "#2daafc",
+        primary: "#04FDA8",
         yellow: "#FBB040",
         "body-color": "#959CB1",
         border: "hsl(var(--border))",
