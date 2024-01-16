@@ -58,7 +58,7 @@ export default function Create() {
       renderer: "svg",
       loop: true,
       autoplay: true,
-      animationData: require("../../../Animation3.json"),
+      animationData: require("../../../Loader.json"),
     });
   });
 

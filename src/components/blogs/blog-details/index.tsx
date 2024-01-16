@@ -91,9 +91,34 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
         </div>
 
         <div>
-        <div className="absolute p-7">
-        <h1>{blogData?.title}</h1>
-        </div>
+          <div className="absolute z-[999] p-7 pt-20 w-full h-full">
+            <div className="justify-center items-center flex flex-col gap-4 lg:mx-44 md:mx-16 sm:mx-4">
+              <h1 className="sm:text-5xl text-4xl font-bold text-center">
+                {blogData?.title}
+              </h1>
+              <p className="sm:text-[1.2rem] text-[1rem] sm:leading-[30px] leading-[25px] text-[#a6a6a6] text-center sm:mx-14 mx-2">
+                Create stunning motion designs, videos, and animations with the
+                world's first professional motion graphics toolset for mobile
+                platforms. From keyframe animation to video compositing to
+                visual effects, do it all from your iPhone, iPad, Mac (with
+                Apple Silicon), or Android device.
+              </p>
+              <Link href='/' className="bg-black border mt-7 p-3 gap-3 border-white rounded-xl flex flex-row">
+                <img
+                  src="/alightmotionlogo.webp"
+                  width={50}
+                  height={50}
+                  className="aspect-square rounded-xl"
+                  alt="Alight Motion Logo"
+                />
+                <div className="flex flex-col text-left">
+                  <p className="text-xs uppercase">Download</p>
+                  <p className="text-2xl font-semibold">From Here!</p>
+                </div>
+              </Link>
+            </div>
+          </div>
+
           <img
             src="/bg.png"
             className="hidden md:block h-full w-full"

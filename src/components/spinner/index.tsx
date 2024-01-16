@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import lottie from "lottie-web";
-import animationData from "../../../Animation1.json";
+import animationData from "../../../Loader.json";
 
 const Loader = () => {
   const lottieContainerRef = useRef(null);
@@ -25,7 +25,7 @@ const Loader = () => {
 
   return (
     <div className="flex items-center justify-center h-screen">
-  <div ref={lottieContainerRef} style={{ width: "100%", height: "100%" }} />
+  <div ref={lottieContainerRef} style={{ width: "25%", height: "25%" }} />
 </div>
 
   );
