@@ -207,18 +207,21 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                 </Alert>
                 <Alert className="w-fit h-fit">
                   <IoStarSharp className="h-4 w-4" />
-                  <AlertTitle className="text-primary">Price</AlertTitle>
-                  <AlertDescription>100% Free</AlertDescription>
+                  <AlertTitle className="text-primary">Supported For</AlertTitle>
+                  <AlertDescription>Only Android 6.0 and up</AlertDescription>
                 </Alert>
+                
+                
                 <Alert className="w-fit h-fit">
                   <IoStarSharp className="h-4 w-4" />
                   <AlertTitle className="text-primary">File Type</AlertTitle>
                   <AlertDescription>APK</AlertDescription>
                 </Alert>
-                <Alert className="w-fit h-fit">
+                
+                <Alert className="w-64 h-fit">
                   <IoStarSharp className="h-4 w-4" />
-                  <AlertTitle className="text-primary">Supported For</AlertTitle>
-                  <AlertDescription>Only Android 6.0 and up</AlertDescription>
+                  <AlertTitle className="text-primary">Price</AlertTitle>
+                  <AlertDescription>100% Free - Premium/Paid Subscription Unlocked</AlertDescription>
                 </Alert>
                 <Alert className="w-48 h-32">
                   <IoStarSharp className="h-4 w-4" />
@@ -232,7 +235,7 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                   <IoStarSharp className="h-4 w-4" />
                   <AlertTitle className="text-primary">MOD Info</AlertTitle>
                   <AlertDescription>
-                    Premium/Paid Subscription Unlocked- No Watermark- Single
+                    No Watermark- Single
                     Package APK (No SAI Needed)
                   </AlertDescription>
                 </Alert>
