@@ -94,7 +94,8 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
         <div>
           <div className="absolute z-[999] p-7 pt-20 w-full h-full">
             <div className="justify-center items-center flex flex-col gap-4">
-              <div className="justify-center items-center flex flex-col gap-4 lg:mx-44 md:mx-16 sm:mx-4">
+              <div className="justify-center items-center flex flex-col gap-4 
+              lg:mx-44 md:mx-16 sm:mx-4">
                 <h1 className="sm:text-5xl text-4xl font-bold text-center">
                   {blogData?.title.replace("'", "&apos;")}
                 </h1>

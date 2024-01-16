@@ -20,10 +20,10 @@ const Features: React.FC<FeaturesProps> = ({
     <div className="rounded-xl w-fit p-5 flex gap-2">
       <Image
         width={80}
-        height={60}
+        height={50}
         src={`/features/${image}`}
         alt="export"
-        className="rounded-full aspect-square object-cover"
+        className="rounded-full w-20 h-20 object-cover"
       />
       <div className="w-64">
         <h1 className="text-xl font-bold">{title}</h1>
