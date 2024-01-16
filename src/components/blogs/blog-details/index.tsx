@@ -11,6 +11,8 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import { IoStarSharp } from "react-icons/io5";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import Specification from '../Specification'
 
 export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
   console.log(blogData, "blogData");
@@ -94,8 +96,10 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
         <div>
           <div className="absolute z-[999] p-7 pt-20 w-full h-full">
             <div className="justify-center items-center flex flex-col gap-4">
-              <div className="justify-center items-center flex flex-col gap-4 
-              lg:mx-44 md:mx-16 sm:mx-4">
+              <div
+                className="justify-center items-center flex flex-col gap-4 
+              lg:mx-44 md:mx-16 sm:mx-4"
+              >
                 <h1 className="sm:text-5xl text-4xl font-bold text-center">
                   {blogData?.title.replace("'", "&apos;")}
                 </h1>
@@ -126,8 +130,10 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                   </div>
                 </Link>
               </div>
-              
-              <h1 className="text-6xl font-bold my-4 mt-16">Alight Motion Features</h1>
+
+              <h1 className="text-6xl font-bold my-4 mt-16">
+                Alight Motion Features
+              </h1>
               <div className="flex xl:mx-24 gap-5 items-center justify-center flex-wrap flex-row w-full my-6">
                 <Feature
                   title="Keyframe Animation"
@@ -174,6 +180,81 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                   description="Illustrate and edit complex vector graphics right in the app."
                   image="vector_illustration.gif"
                 />
+              </div>
+
+              <div className="flex xl:mx-24 gap-5 items-center justify-center flex-wrap flex-row w-full my-6">
+                <Alert className="w-72 h-32">
+                  <IoStarSharp className="h-4 w-4" />
+                  <AlertTitle>Latest Version</AlertTitle>
+                  <AlertDescription>v5.0.200.1000653</AlertDescription>
+                </Alert>
+                <Alert className="w-72 h-32">
+                  <IoStarSharp className="h-4 w-4" />
+                  <AlertTitle>Size</AlertTitle>
+                  <AlertDescription>81.58 MB</AlertDescription>
+                </Alert>
+                <Alert className="w-72 h-32">
+                  <IoStarSharp className="h-4 w-4" />
+                  <AlertTitle>Released On</AlertTitle>
+                  <AlertDescription>Aug 5, 2018</AlertDescription>
+                </Alert>
+
+                <Alert className="w-72 h-32">
+                  <IoStarSharp className="h-4 w-4" />
+                  <AlertTitle>Last Updated On</AlertTitle>
+                  <AlertDescription>December 15, 2023</AlertDescription>
+                </Alert>
+                <Alert className="w-72 h-32">
+                  <IoStarSharp className="h-4 w-4" />
+                  <AlertTitle>Developer</AlertTitle>
+                  <AlertDescription>Alight Motion</AlertDescription>
+                </Alert>
+                <Alert className="w-72 h-32">
+                  <IoStarSharp className="h-4 w-4" />
+                  <AlertTitle>Category/Genres</AlertTitle>
+                  <AlertDescription>
+                    Video Editing/Video Players & Editors
+                  </AlertDescription>
+                </Alert>
+                <Alert className="w-72 h-32">
+                  <IoStarSharp className="h-4 w-4" />
+                  <AlertTitle>File Type</AlertTitle>
+                  <AlertDescription>APK</AlertDescription>
+                </Alert>
+                <Alert className="w-72 h-32">
+                  <IoStarSharp className="h-4 w-4" />
+                  <AlertTitle>Supported For</AlertTitle>
+                  <AlertDescription>Only Android 6.0 and up</AlertDescription>
+                </Alert>
+                <Alert className="w-72 h-32">
+                  <IoStarSharp className="h-4 w-4" />
+                  <AlertTitle>Price</AlertTitle>
+                  <AlertDescription>100% Free</AlertDescription>
+                </Alert>
+                <Alert className="w-72 h-32">
+                  <IoStarSharp className="h-4 w-4" />
+                  <AlertTitle>MOD Info</AlertTitle>
+                  <AlertDescription>
+                    Premium/Paid Subscription Unlocked- No Watermark- Single
+                    Package APK (No SAI Needed)
+                  </AlertDescription>
+                </Alert>
+                <Alert className="w-72 h-32">
+                  <IoStarSharp className="h-4 w-4" />
+                  <AlertTitle>Developer/Publisher:</AlertTitle>
+                  <AlertDescription>
+                    Alight Motion/Alight Creative Inc
+                  </AlertDescription>
+                </Alert>
+                <Alert className="w-72 h-32">
+                  <IoStarSharp className="h-4 w-4" />
+                  <AlertTitle>Google Play ID/Package Name</AlertTitle>
+                  <AlertDescription>com.alightcreative.motion</AlertDescription>
+                </Alert>
+              </div>
+              
+              <div>
+               {/* <Specification /> */}
               </div>
             </div>
           </div>
