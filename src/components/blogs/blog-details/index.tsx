@@ -113,20 +113,21 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                 >
                   <img
                     src="/alightmotionlogo.webp"
-                    width={50}
-                    height={50}
+                    width={70}
+                    height={70}
                     className="aspect-square rounded-xl"
                     alt="Alight Motion Logo"
                   />
                   <div className="flex flex-col text-left">
-                    <p className="text-2xl uppercase -mt-1 font-semibold">
+                    <p className="text-3xl uppercase -mt-1 font-semibold">
                       Download
                     </p>
-                    <p className="text-xs">From Here</p>
+                    <p className="text-lg">From Here</p>
                   </div>
                 </Link>
               </div>
               
+              <h1 className="text-6xl font-bold my-4 mt-16">Alight Motion Features</h1>
               <div className="flex xl:mx-24 gap-5 items-center justify-center flex-wrap flex-row w-full my-6">
                 <Feature
                   title="Keyframe Animation"
