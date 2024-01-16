@@ -98,11 +98,11 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
 </h1>
 
               <p className="sm:text-[1.2rem] text-[1rem] sm:leading-[30px] leading-[25px] text-[#a6a6a6] text-center sm:mx-14 mx-2">
-                Create stunning motion designs, videos, and animations with the
+                {`Create stunning motion designs, videos, and animations with the
                 world's first professional motion graphics toolset for mobile
                 platforms. From keyframe animation to video compositing to
                 visual effects, do it all from your iPhone, iPad, Mac (with
-                Apple Silicon), or Android device.
+                Apple Silicon), or Android device.`.replace("'", "&apos;")}
               </p>
               <Link href='/' className="bg-black border mt-7 p-3 gap-3 border-white rounded-xl flex flex-row">
                 <img
