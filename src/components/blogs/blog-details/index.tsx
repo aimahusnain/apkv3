@@ -186,7 +186,9 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
               <div className="flex xl:mx-24 gap-5 items-center justify-center flex-wrap flex-row w-full my-6">
                 <Alert className="w-fit h-fit">
                   <IoStarSharp className="h-4 w-4" />
-                  <AlertTitle className="text-primary">Latest Version</AlertTitle>
+                  <AlertTitle className="text-primary">
+                    Latest Version
+                  </AlertTitle>
                   <AlertDescription>v5.0.200.1000653</AlertDescription>
                 </Alert>
                 <Alert className="w-fit h-fit">
@@ -202,53 +204,63 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
 
                 <Alert className="w-fit h-fit">
                   <IoStarSharp className="h-4 w-4" />
-                  <AlertTitle className="text-primary">Last Updated On</AlertTitle>
+                  <AlertTitle className="text-primary">
+                    Last Updated On
+                  </AlertTitle>
                   <AlertDescription>December 15, 2023</AlertDescription>
                 </Alert>
                 <Alert className="w-fit h-fit">
                   <IoStarSharp className="h-4 w-4" />
-                  <AlertTitle className="text-primary">Supported For</AlertTitle>
+                  <AlertTitle className="text-primary">
+                    Supported For
+                  </AlertTitle>
                   <AlertDescription>Only Android 6.0 and up</AlertDescription>
                 </Alert>
-                
-                
+
                 <Alert className="w-fit h-fit">
                   <IoStarSharp className="h-4 w-4" />
                   <AlertTitle className="text-primary">File Type</AlertTitle>
                   <AlertDescription>APK</AlertDescription>
                 </Alert>
-                
+
                 <Alert className="w-64 h-fit">
                   <IoStarSharp className="h-4 w-4" />
                   <AlertTitle className="text-primary">Price</AlertTitle>
-                  <AlertDescription>100% Free - Premium/Paid Subscription Unlocked</AlertDescription>
+                  <AlertDescription>
+                    100% Free - Premium/Paid Subscription Unlocked
+                  </AlertDescription>
                 </Alert>
-                <Alert className="w-48 h-32">
+                <Alert className="w-48 h-fit">
                   <IoStarSharp className="h-4 w-4" />
-                  <AlertTitle className="text-primary">Category/Genres</AlertTitle>
+                  <AlertTitle className="text-primary">
+                    Category/Genres
+                  </AlertTitle>
                   <AlertDescription>
                     Video Editing/Video Players & Editors
                   </AlertDescription>
                 </Alert>
-                
-                <Alert className="w-64 h-32">
+
+                <Alert className="w-64 h-fit">
                   <IoStarSharp className="h-4 w-4" />
                   <AlertTitle className="text-primary">MOD Info</AlertTitle>
                   <AlertDescription>
-                    No Watermark- Single
-                    Package APK (No SAI Needed)
+                    No Watermark- Single Package APK (No SAI Needed)
                   </AlertDescription>
                 </Alert>
-                <Alert className="w-52 h-32">
+                <Alert className="w-52 h-fit">
                   <IoStarSharp className="h-4 w-4" />
-                  <AlertTitle className="text-primary">Developer/Publisher:</AlertTitle>
+                  <AlertTitle className="text-primary">
+                    Developer/Publisher:
+                  </AlertTitle>
                   <AlertDescription>
                     Alight Motion/Alight Creative Inc
                   </AlertDescription>
                 </Alert>
-                <Alert className="w-64 h-32">
+                <Alert className="w-64 h-fit">
                   <IoStarSharp className="h-4 w-4" />
-                  <AlertTitle className="text-primary">Google Play ID/Package Name</AlertTitle>
+                  <AlertTitle className="text-primary">
+                    Google Play ID/Package Name
+                  </AlertTitle>
                   <AlertDescription>com.alightcreative.motion</AlertDescription>
                 </Alert>
               </div>
