@@ -104,7 +104,7 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                 visual effects, do it all from your iPhone, iPad, Mac (with
                 Apple Silicon), or Android device.`.replace("'", "&apos;")}
               </p>
-              <Link href='/' className="bg-black border mt-7 p-3 gap-3 border-white rounded-xl flex flex-row">
+              <Link href='/' className="bg-black border mt-7 px-4 p-3 gap-3 border-white rounded-xl flex flex-row items-center">
                 <img
                   src="/alightmotionlogo.webp"
                   width={50}
@@ -113,8 +113,8 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                   alt="Alight Motion Logo"
                 />
                 <div className="flex flex-col text-left">
-                  <p className="text-xs uppercase">Download</p>
-                  <p className="text-2xl font-semibold">From Here!</p>
+                  <p className="text-2xl uppercase -mt-1 font-semibold">Download</p>
+                  <p className="text-xs">From Here</p>
                 </div>
               </Link>
             </div>
