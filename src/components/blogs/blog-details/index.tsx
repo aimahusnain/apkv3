@@ -93,9 +93,9 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
         <div>
           <div className="absolute z-[999] p-7 pt-20 w-full h-full">
             <div className="justify-center items-center flex flex-col gap-4 lg:mx-44 md:mx-16 sm:mx-4">
-            <h1 className="sm:text-5xl text-4xl font-bold text-center">
-  {blogData?.title.replace("'", "&apos;")}
-</h1>
+              <h1 className="sm:text-5xl text-4xl font-bold text-center">
+                {blogData?.title.replace("'", "&apos;")}
+              </h1>
 
               <p className="sm:text-[1.2rem] text-[1rem] sm:leading-[30px] leading-[25px] text-[#a6a6a6] text-center sm:mx-14 mx-2">
                 {`Create stunning motion designs, videos, and animations with the
@@ -104,7 +104,10 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                 visual effects, do it all from your iPhone, iPad, Mac (with
                 Apple Silicon), or Android device.`.replace("'", "&apos;")}
               </p>
-              <Link href='/' className="bg-black border mt-7 px-4 p-3 gap-3 border-white rounded-xl flex flex-row items-center">
+              <Link
+                href="/"
+                className="bg-black border mt-7 px-4 p-3 gap-3 border-white rounded-xl flex flex-row items-center"
+              >
                 <img
                   src="/alightmotionlogo.webp"
                   width={50}
@@ -113,10 +116,285 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                   alt="Alight Motion Logo"
                 />
                 <div className="flex flex-col text-left">
-                  <p className="text-2xl uppercase -mt-1 font-semibold">Download</p>
+                  <p className="text-2xl uppercase -mt-1 font-semibold">
+                    Download
+                  </p>
                   <p className="text-xs">From Here</p>
                 </div>
               </Link>
+
+              <div
+                className="am-features-app flex flex-col justify-center items-center px-8"
+                data-v-f317b550=""
+              >
+                <div
+                  className="title-text hidden sm:block sm:mt-24"
+                  data-v-f317b550=""
+                >
+                  Alight Motion Features
+                </div>{" "}
+                <div className="features mt-20 mb-10" data-v-f317b550="">
+                  <div
+                    data-v-5c9571d6=""
+                    data-v-f317b550=""
+                    className="feature-el flex mb-4"
+                  >
+                    <div
+                      data-v-5c9571d6=""
+                      className="flex justify-center items-center"
+                    >
+                      {" "}
+                      <div
+                        data-v-5c9571d6=""
+                        className="icon mix-blend-screen"
+                        style={{ backgroundImage: `url('/features/keyframe_animation.png')` } as React.CSSProperties}
+                      ></div>
+                    </div>{" "}
+                    <div
+                      data-v-5c9571d6=""
+                      className="mx-4 content flex flex-col justify-around"
+                    >
+                      <div data-v-5c9571d6="" className="name-text">
+                        Keyframe Animation
+                      </div>{" "}
+                      <div data-v-5c9571d6="" className="desc-text">
+                        Animate any property to bring every aspect of your
+                        creation to life.
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-v-5c9571d6=""
+                    data-v-f317b550=""
+                    className="feature-el flex mb-4"
+                  >
+                    <div
+                      data-v-5c9571d6=""
+                      className="flex justify-center items-center"
+                    >
+                      {" "}
+                      <div
+                        data-v-5c9571d6=""
+                        className="icon mix-blend-screen"
+                        style={{ backgroundImage: `url('/features/camera_control.png')` } as React.CSSProperties}
+                      ></div>
+                    </div>{" "}
+                    <div
+                      data-v-5c9571d6=""
+                      className="mx-4 content flex flex-col justify-around"
+                    >
+                      <div data-v-5c9571d6="" className="name-text">
+                        Camera Control
+                      </div>{" "}
+                      <div data-v-5c9571d6="" className="desc-text">
+                        Animate cameras to build dynamic scenes.
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-v-5c9571d6=""
+                    data-v-f317b550=""
+                    className="feature-el flex mb-4"
+                  >
+                    <div
+                      data-v-5c9571d6=""
+                      className="flex justify-center items-center"
+                    >
+                      {" "}
+                      <div
+                        data-v-5c9571d6=""
+                        className="icon mix-blend-screen"
+                        style={{ backgroundImage: `url('/features/video_image.png')` } as React.CSSProperties}
+                      ></div>
+                    </div>{" "}
+                    <div
+                      data-v-5c9571d6=""
+                      className="mx-4 content flex flex-col justify-around"
+                    >
+                      <div data-v-5c9571d6="" className="name-text">
+                        Video, Image, Text, and Graphics
+                      </div>{" "}
+                      <div data-v-5c9571d6="" className="desc-text">
+                        Combine multitude of layers in a variety of media types.
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-v-5c9571d6=""
+                    data-v-f317b550=""
+                    className="feature-el flex mb-4"
+                  >
+                    <div
+                      data-v-5c9571d6=""
+                      className="flex justify-center items-center"
+                    >
+                      {" "}
+                      <div
+                        data-v-5c9571d6=""
+                        className="icon mix-blend-screen"
+                        style={{ backgroundImage: `url('/features/hierarchical_parenting.png')` } as React.CSSProperties}
+                      ></div>
+                    </div>{" "}
+                    <div
+                      data-v-5c9571d6=""
+                      className="mx-4 content flex flex-col justify-around"
+                    >
+                      <div data-v-5c9571d6="" className="name-text">
+                        Hierarchical Parenting
+                      </div>{" "}
+                      <div data-v-5c9571d6="" className="desc-text">
+                        Link layers to easily create sophisticated motion.
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-v-5c9571d6=""
+                    data-v-f317b550=""
+                    className="feature-el flex mb-4"
+                  >
+                    <div
+                      data-v-5c9571d6=""
+                      className="flex justify-center items-center"
+                    >
+                      {" "}
+                      <div
+                        data-v-5c9571d6=""
+                        className="icon mix-blend-screen"
+                        style={{ backgroundImage: `url('/features/advanced_easing.png')` } as React.CSSProperties}
+                      ></div>
+                    </div>{" "}
+                    <div
+                      data-v-5c9571d6=""
+                      className="mx-4 content flex flex-col justify-around"
+                    >
+                      <div data-v-5c9571d6="" className="name-text">
+                        Advanced Easing
+                      </div>{" "}
+                      <div data-v-5c9571d6="" className="desc-text">
+                        No need for fancy math: Alight Motion does the work for
+                        you.
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-v-5c9571d6=""
+                    data-v-f317b550=""
+                    className="feature-el flex mb-4"
+                  >
+                    <div
+                      data-v-5c9571d6=""
+                      className="flex justify-center items-center"
+                    >
+                      {" "}
+                      <div
+                        data-v-5c9571d6=""
+                        className="icon mix-blend-screen"
+                        style={{ backgroundImage: `url('/features/150_effects.png')` } as React.CSSProperties}
+                      ></div>
+                    </div>{" "}
+                    <div
+                      data-v-5c9571d6=""
+                      className="mx-4 content flex flex-col justify-around"
+                    >
+                      <div data-v-5c9571d6="" className="name-text">
+                        150+ Visual Effects
+                      </div>{" "}
+                      <div data-v-5c9571d6="" className="desc-text">
+                        Versatile effects you can mix and match in infinite
+                        combinations.
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-v-5c9571d6=""
+                    data-v-f317b550=""
+                    className="feature-el flex mb-4"
+                  >
+                    <div
+                      data-v-5c9571d6=""
+                      className="flex justify-center items-center"
+                    >
+                      {" "}
+                      <div
+                        data-v-5c9571d6=""
+                        className="icon mix-blend-screen"
+                        style={{ backgroundImage: `url('/features/composition.gif')` } as React.CSSProperties}
+                      ></div>
+                    </div>{" "}
+                    <div
+                      data-v-5c9571d6=""
+                      className="mx-4 content flex flex-col justify-around"
+                    >
+                      <div data-v-5c9571d6="" className="name-text">
+                        Powerful Compositing
+                      </div>{" "}
+                      <div data-v-5c9571d6="" className="desc-text">
+                        Masking groups, blending modes, video transparency
+                        <sup>1</sup>, chroma and luma key.{" "}
+                        <span className="minor">
+                          <sup>1</sup>Apple platforms only
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-v-5c9571d6=""
+                    data-v-f317b550=""
+                    className="feature-el flex mb-4"
+                  >
+                    <div
+                      data-v-5c9571d6=""
+                      className="flex justify-center items-center"
+                    >
+                      <div
+                        data-v-5c9571d6=""
+                        className="icon mix-blend-screen"
+                        style={{ backgroundImage: `url('/features/export.gif')` } as React.CSSProperties}
+                      ></div>{" "}
+                    </div>{" "}
+                    <div
+                      data-v-5c9571d6=""
+                      className="mx-4 content flex flex-col justify-around"
+                    >
+                      <div data-v-5c9571d6="" className="name-text">
+                        Versatile Sharing
+                      </div>{" "}
+                      <div data-v-5c9571d6="" className="desc-text">
+                        Share video, GIF, image sequences, project packages, and
+                        reusable elements.
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-v-5c9571d6=""
+                    data-v-f317b550=""
+                    className="feature-el flex mb-4"
+                  >
+                    <div
+                      data-v-5c9571d6=""
+                      className="flex justify-center items-center"
+                    >
+                      <div
+                        data-v-5c9571d6=""
+                        className="icon mix-blend-screen"
+                        style={{ backgroundImage: `url('/features/vector_illustration.gif')` } as React.CSSProperties}
+                      ></div>{" "}
+                    </div>{" "}
+                    <div
+                      data-v-5c9571d6=""
+                      className="mx-4 content flex flex-col justify-around"
+                    >
+                      <div data-v-5c9571d6="" className="name-text">
+                        Vector Illustration
+                      </div>{" "}
+                      <div data-v-5c9571d6="" className="desc-text">
+                        Illustrate and edit complex vector graphics right in the
+                        app.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
