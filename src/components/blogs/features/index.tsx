@@ -26,7 +26,7 @@ const Features: React.FC<FeaturesProps> = ({
         className="rounded-full w-20 h-20 object-cover"
       />
       <div className="w-64">
-        <h1 className="text-xl font-bold">{title}</h1>
+        <h1 className="text-2xl font-bold">{title}</h1>
         <p className="text-md text-white/70">{description}</p>
       </div>
     </div>

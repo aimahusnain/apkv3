@@ -127,7 +127,7 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                 </Link>
               </div>
               
-              <div className="flex gap-5 flex-wrap flex-row w-full my-6">
+              <div className="flex xl:mx-24 gap-5 items-center justify-center flex-wrap flex-row w-full my-6">
                 <Feature
                   title="Keyframe Animation"
                   description="Animate any property to bring every aspect of your creation to life."
