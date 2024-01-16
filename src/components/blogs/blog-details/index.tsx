@@ -1,19 +1,19 @@
 "use client";
 
-import Feature from "../features";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Blog } from "@/utils/types";
-import { Facebook, LucideTwitter } from "lucide-react";
 import { useSession } from "next-auth/react";
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
 import { IoStarSharp } from "react-icons/io5";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import Specification from "../Specification";
-import { GitGraph } from "lucide-react";
+import Feature from "../features";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
   console.log(blogData, "blogData");
@@ -341,10 +341,42 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
               </div>
               
               <h1 className="text-6xl font-bold my-4 mt-16 text-center">
-                FAQ's
+                FAQ&apos;s
               </h1>
               <div className="flex xl:mx-24 gap-5 items-center justify-center flex-wrap flex-row w-full my-6">
-                {/* Add Accordions Here! */}
+              <Accordion type="single" collapsible>
+  <AccordionItem value="item-1">
+    <AccordionTrigger>Does Alight Motion Support XML Files?</AccordionTrigger>
+    <AccordionContent>
+    Yes, Alight Motion does offer support to the XML files. With the help of this feature you become able to import the files from any source or folder. Thus it makes your own job easier and you get to experience better results.
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-2">
+    <AccordionTrigger>How to remove Watermarks in the Alight Motion App?</AccordionTrigger>
+    <AccordionContent>
+    There are two methods to remove the watermarks from your final products in Alight Motion Mod. Either you buy the premium version and automatically get rid of the watermarks. On the other hand you can download the mod version of Alight Motion which will help you get rid of all the watermarks.
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-3">
+    <AccordionTrigger>How to install Alight Motion Pro on PC?</AccordionTrigger>
+    <AccordionContent>
+      Yes. It adheres to the WAI-ARIA design pattern.
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-4">
+    <AccordionTrigger>How To Use an Alight Motion App on Your Phone?</AccordionTrigger>
+    <AccordionContent>
+      Yes. It adheres to the WAI-ARIA design pattern.
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-5">
+    <AccordionTrigger>Why Use Alight Motion For Android?</AccordionTrigger>
+    <AccordionContent>
+      Yes. It adheres to the WAI-ARIA design pattern.
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+
               </div>
               
               <div>
