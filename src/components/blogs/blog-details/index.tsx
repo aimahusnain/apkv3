@@ -314,7 +314,7 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                     </AlertDescription>
                   </div>
                 </Alert>
-                <Alert className="w-64 h-fit items-left flex gap-3 flex-row justify-center">
+                <Alert className="w-fit h-24 items-left flex gap-3 flex-row justify-center">
                   <div className="flex-col w-fit h-full flex items-center justify-center">
                     <IoStarSharp className="h-4 w-4" />
                   </div>
@@ -338,6 +338,17 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                     <AlertDescription>Video Players & Editors</AlertDescription>
                   </div>
                 </Alert>
+              </div>
+              
+              <h1 className="text-6xl font-bold my-4 mt-16 text-center">
+                FAQ's
+              </h1>
+              <div className="flex xl:mx-24 gap-5 items-center justify-center flex-wrap flex-row w-full my-6">
+                {/* Add Accordions Here! */}
+              </div>
+              
+              <div>
+                  
               </div>
 
               {/* <div>

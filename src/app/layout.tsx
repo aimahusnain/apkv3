@@ -6,6 +6,7 @@ import NextThemeProvider from "@/providers/theme-provider";
 import GlobalState from "@/context";
 import Header from "@/components/header";
 import { Toaster } from "@/components/ui/toaster"
+import Footer from '@/components/Footer'
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -26,6 +27,7 @@ export default function RootLayout({
             <GlobalState>
               <Header />
               {children}
+              <Footer />
               <Toaster />
             </GlobalState>
           </NextAuthProvider>
