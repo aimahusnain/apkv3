@@ -132,7 +132,7 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                 </Link>
               </div>
 
-              <h1 className="text-6xl font-bold my-4 mt-16">
+              <h1 className="text-6xl font-bold my-4 mt-16 text-center">
                 Alight Motion Features
               </h1>
               <div className="flex xl:mx-24 gap-5 items-center justify-center flex-wrap flex-row w-full my-6">
@@ -223,28 +223,45 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                   <AlertDescription>APK</AlertDescription>
                 </Alert>
 
-                <Alert className="w-64 h-fit">
+                <Alert className="w-fit h-fit">
                   <IoStarSharp className="h-4 w-4" />
                   <AlertTitle className="text-primary">Price</AlertTitle>
                   <AlertDescription>
-                    100% Free - Premium/Paid Subscription Unlocked
+                    100% Free
                   </AlertDescription>
                 </Alert>
                 <Alert className="w-48 h-fit">
                   <IoStarSharp className="h-4 w-4" />
                   <AlertTitle className="text-primary">
-                    Category/Genres
+                    Category
                   </AlertTitle>
                   <AlertDescription>
-                    Video Editing/Video Players & Editors
+                    Video Editing
                   </AlertDescription>
                 </Alert>
-
+                <Alert className="w-52 h-fit">
+                  <IoStarSharp className="h-4 w-4" />
+                  <AlertTitle className="text-primary">
+                    Genres
+                  </AlertTitle>
+                  <AlertDescription>
+                    Video Players & Editors
+                  </AlertDescription>
+                </Alert>
+                <Alert className="w-52 h-fit">
+                  <IoStarSharp className="h-4 w-4" />
+                  <AlertTitle className="text-primary">
+                    Subscription
+                  </AlertTitle>
+                  <AlertDescription>
+                  Premium/Paid Subscription Unlocked
+                  </AlertDescription>
+                </Alert>
                 <Alert className="w-64 h-fit">
                   <IoStarSharp className="h-4 w-4" />
                   <AlertTitle className="text-primary">MOD Info</AlertTitle>
                   <AlertDescription>
-                    No Watermark- Single Package APK (No SAI Needed)
+                    Single Package APK (No SAI Needed)
                   </AlertDescription>
                 </Alert>
                 <Alert className="w-52 h-fit">
