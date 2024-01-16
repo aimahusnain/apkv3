@@ -377,7 +377,7 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                     </AccordionTrigger>
                     <AccordionContent className="w-96">
                       Alight Motion Pro can also be downloaded on a PC because
-                      it's obvious users want to create graphics on a big screen
+                      it&apos;s obvious users want to create graphics on a big screen
                       of their laptop or PC. So for this purpose you need to
                       install an Android emulator like BlueStacks on your PC.
                       Afterwards you can install the Alight Motion Pro app on
