@@ -184,68 +184,69 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
               </div>
 
               <div className="flex xl:mx-24 gap-5 items-center justify-center flex-wrap flex-row w-full my-6">
-                <Alert className="w-fit h-32">
+                <Alert className="w-fit h-fit">
                   <IoStarSharp className="h-4 w-4" />
-                  <AlertTitle>Latest Version</AlertTitle>
-                  <AlertDescription className="text-primary">v5.0.200.1000653</AlertDescription>
+                  <AlertTitle className="text-primary">Latest Version</AlertTitle>
+                  <AlertDescription>v5.0.200.1000653</AlertDescription>
                 </Alert>
-                <Alert className="w-fit h-32">
+                <Alert className="w-fit h-fit">
                   <IoStarSharp className="h-4 w-4" />
-                  <AlertTitle>Size</AlertTitle>
-                  <AlertDescription className="text-primary">81.58 MB</AlertDescription>
+                  <AlertTitle className="text-primary">Size</AlertTitle>
+                  <AlertDescription>81.58 MB</AlertDescription>
                 </Alert>
-                <Alert className="w-fit h-32">
+                <Alert className="w-fit h-fit">
                   <IoStarSharp className="h-4 w-4" />
-                  <AlertTitle>Released On</AlertTitle>
-                  <AlertDescription className="text-primary">Aug 5, 2018</AlertDescription>
+                  <AlertTitle className="text-primary">Released On</AlertTitle>
+                  <AlertDescription>Aug 5, 2018</AlertDescription>
                 </Alert>
 
-                <Alert className="w-fit h-32">
+                <Alert className="w-fit h-fit">
                   <IoStarSharp className="h-4 w-4" />
-                  <AlertTitle>Last Updated On</AlertTitle>
-                  <AlertDescription className="text-primary">December 15, 2023</AlertDescription>
+                  <AlertTitle className="text-primary">Last Updated On</AlertTitle>
+                  <AlertDescription>December 15, 2023</AlertDescription>
+                </Alert>
+                <Alert className="w-fit h-fit">
+                  <IoStarSharp className="h-4 w-4" />
+                  <AlertTitle className="text-primary">Price</AlertTitle>
+                  <AlertDescription>100% Free</AlertDescription>
+                </Alert>
+                <Alert className="w-fit h-fit">
+                  <IoStarSharp className="h-4 w-4" />
+                  <AlertTitle className="text-primary">File Type</AlertTitle>
+                  <AlertDescription>APK</AlertDescription>
+                </Alert>
+                <Alert className="w-fit h-fit">
+                  <IoStarSharp className="h-4 w-4" />
+                  <AlertTitle className="text-primary">Supported For</AlertTitle>
+                  <AlertDescription>Only Android 6.0 and up</AlertDescription>
                 </Alert>
                 <Alert className="w-48 h-32">
                   <IoStarSharp className="h-4 w-4" />
-                  <AlertTitle>Category/Genres</AlertTitle>
-                  <AlertDescription className="text-primary">
+                  <AlertTitle className="text-primary">Category/Genres</AlertTitle>
+                  <AlertDescription>
                     Video Editing/Video Players & Editors
                   </AlertDescription>
                 </Alert>
-                <Alert className="w-fit h-32">
-                  <IoStarSharp className="h-4 w-4" />
-                  <AlertTitle>File Type</AlertTitle>
-                  <AlertDescription className="text-primary">APK</AlertDescription>
-                </Alert>
-                <Alert className="w-48 h-32">
-                  <IoStarSharp className="h-4 w-4" />
-                  <AlertTitle>Supported For</AlertTitle>
-                  <AlertDescription className="text-primary">Only Android 6.0 and up</AlertDescription>
-                </Alert>
-                <Alert className="w-fit h-32">
-                  <IoStarSharp className="h-4 w-4" />
-                  <AlertTitle>Price</AlertTitle>
-                  <AlertDescription className="text-primary">100% Free</AlertDescription>
-                </Alert>
+                
                 <Alert className="w-64 h-32">
                   <IoStarSharp className="h-4 w-4" />
-                  <AlertTitle>MOD Info</AlertTitle>
-                  <AlertDescription className="text-primary">
+                  <AlertTitle className="text-primary">MOD Info</AlertTitle>
+                  <AlertDescription>
                     Premium/Paid Subscription Unlocked- No Watermark- Single
                     Package APK (No SAI Needed)
                   </AlertDescription>
                 </Alert>
                 <Alert className="w-52 h-32">
                   <IoStarSharp className="h-4 w-4" />
-                  <AlertTitle>Developer/Publisher:</AlertTitle>
-                  <AlertDescription className="text-primary">
+                  <AlertTitle className="text-primary">Developer/Publisher:</AlertTitle>
+                  <AlertDescription>
                     Alight Motion/Alight Creative Inc
                   </AlertDescription>
                 </Alert>
                 <Alert className="w-64 h-32">
                   <IoStarSharp className="h-4 w-4" />
-                  <AlertTitle>Google Play ID/Package Name</AlertTitle>
-                  <AlertDescription className="text-primary">com.alightcreative.motion</AlertDescription>
+                  <AlertTitle className="text-primary">Google Play ID/Package Name</AlertTitle>
+                  <AlertDescription>com.alightcreative.motion</AlertDescription>
                 </Alert>
               </div>
 
@@ -311,7 +312,7 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
 }
 // <div className="w-full h-full">
 //   {/* Top Title Sectoin */}
-//   <div className="my-32 px-16 flex gap-8 flex-col">
+//   <div className="my-fit px-16 flex gap-8 flex-col">
 //     {/* <!-- Breadcrumb --> */}
 //     <nav className="flex text-black rounded-lg">
 //       <ol className="inline-flex items-center space-x-1">
