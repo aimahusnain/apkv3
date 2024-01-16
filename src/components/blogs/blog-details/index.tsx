@@ -257,7 +257,7 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                   Premium/Paid Subscription Unlocked
                   </AlertDescription>
                 </Alert>
-                <Alert className="w-64 h-fit">
+                <Alert className=" w-48 h-fit">
                   <IoStarSharp className="h-4 w-4" />
                   <AlertTitle className="text-primary">MOD Info</AlertTitle>
                   <AlertDescription>
