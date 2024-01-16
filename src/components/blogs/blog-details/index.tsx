@@ -184,54 +184,46 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
               </div>
 
               <div className="flex xl:mx-24 gap-5 items-center justify-center flex-wrap flex-row w-full my-6">
-                <Alert className="w-fit h-24">
-                  <IoStarSharp className="h-4 w-4" />
+                <Alert className="w-fit h-24 flex flex-col items-left justify-center">
                   <AlertTitle className="text-primary">
                     Latest Version
                   </AlertTitle>
                   <AlertDescription>v5.0.200.1000653</AlertDescription>
                 </Alert>
-                <Alert className="w-fit h-24">
-                  <IoStarSharp className="h-4 w-4" />
+                <Alert className="w-fit h-24 flex flex-col items-left justify-center">
                   <AlertTitle className="text-primary">Size</AlertTitle>
                   <AlertDescription>81.58 MB</AlertDescription>
                 </Alert>
-                <Alert className="w-fit h-24">
-                  <IoStarSharp className="h-4 w-4" />
+                <Alert className="w-fit h-24 flex flex-col items-left justify-center">
                   <AlertTitle className="text-primary">Released On</AlertTitle>
                   <AlertDescription>Aug 5, 2018</AlertDescription>
                 </Alert>
 
-                <Alert className="w-fit h-24">
-                  <IoStarSharp className="h-4 w-4" />
+                <Alert className="w-fit h-24 flex flex-col items-left justify-center">
                   <AlertTitle className="text-primary">
                     Last Updated On
                   </AlertTitle>
                   <AlertDescription>December 15, 2023</AlertDescription>
                 </Alert>
-                <Alert className="w-fit h-24">
-                  <IoStarSharp className="h-4 w-4" />
+                <Alert className="w-fit h-24 flex flex-col items-left justify-center">
                   <AlertTitle className="text-primary">
                     Supported For
                   </AlertTitle>
                   <AlertDescription>Only Android 6.0 and up</AlertDescription>
                 </Alert>
 
-                <Alert className="w-fit h-24">
-                  <IoStarSharp className="h-4 w-4" />
+                <Alert className="w-fit h-24 flex flex-col items-left justify-center">
                   <AlertTitle className="text-primary">File Type</AlertTitle>
                   <AlertDescription>APK</AlertDescription>
                 </Alert>
 
-                <Alert className="w-fit h-24">
-                  <IoStarSharp className="h-4 w-4" />
+                <Alert className="w-fit h-24 flex flex-col items-left justify-center">
                   <AlertTitle className="text-primary">Price</AlertTitle>
                   <AlertDescription>
                     100% Free
                   </AlertDescription>
                 </Alert>
-                <Alert className="w-48 h-24">
-                  <IoStarSharp className="h-4 w-4" />
+                <Alert className="w-48 h-24 items-left flex flex-col justify-center">
                   <AlertTitle className="text-primary">
                     Category
                   </AlertTitle>
@@ -239,8 +231,7 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                     Video Editing
                   </AlertDescription>
                 </Alert>
-                <Alert className="w-52 h-24">
-                  <IoStarSharp className="h-4 w-4" />
+                <Alert className="w-fit h-24 items-left flex flex-col justify-center">
                   <AlertTitle className="text-primary">
                     Genres
                   </AlertTitle>
@@ -248,8 +239,7 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                     Video Players & Editors
                   </AlertDescription>
                 </Alert>
-                <Alert className="w-52 h-24">
-                  <IoStarSharp className="h-4 w-4" />
+                <Alert className="w-fit h-24 items-left flex flex-col justify-center">
                   <AlertTitle className="text-primary">
                     Subscription
                   </AlertTitle>
@@ -257,15 +247,13 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                   Premium/Paid Subscription Unlocked
                   </AlertDescription>
                 </Alert>
-                <Alert className=" w-48 h-24">
-                  <IoStarSharp className="h-4 w-4" />
+                <Alert className=" w-48 h-24 items-left flex flex-col justify-center">
                   <AlertTitle className="text-primary">MOD Info</AlertTitle>
                   <AlertDescription>
                     Single Package APK (No SAI Needed)
                   </AlertDescription>
                 </Alert>
-                <Alert className="w-52 h-24">
-                  <IoStarSharp className="h-4 w-4" />
+                <Alert className="w-52 h-24 items-left flex flex-col justify-center">
                   <AlertTitle className="text-primary">
                     Developer/Publisher:
                   </AlertTitle>
@@ -273,8 +261,7 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                     Alight Motion/Alight Creative Inc
                   </AlertDescription>
                 </Alert>
-                <Alert className="w-64 h-fit">
-                  <IoStarSharp className="h-4 w-4" />
+                <Alert className="w-64 h-fit items-left flex flex-col justify-center">
                   <AlertTitle className="text-primary">
                     Google Play ID/Package Name
                   </AlertTitle>
