@@ -3,12 +3,12 @@
 import { useContext, useEffect, useState } from "react";
 import ThemeToggler from "../themes";
 import Link from "next/link";
-import { menuItems } from "@/utils";
-import { MenuItem } from "@/utils/types";
+import { menuItems } from "@/src/utils";
+import { MenuItem } from "@/src/utils/types";
 import Button from "../button";
 import { signIn, signOut, useSession } from "next-auth/react";
 import { usePathname, useRouter } from "next/navigation";
-import { GlobalContext } from "@/context";
+import { GlobalContext } from "@/src/context";
 import { BookKey } from "lucide-react";
 
 export default function Header() {

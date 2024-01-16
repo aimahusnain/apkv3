@@ -130,11 +130,11 @@
 
 "use client";
 
-import { Blog } from "@/utils/types";
+import { Blog } from "@/src/utils/types";
 import Button from "../button";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { categories } from "@/utils";
+import { categories } from "@/src/utils";
 import Link from "next/link";
 
 export default function CategoryList({ list }: { list: Blog[] }) {

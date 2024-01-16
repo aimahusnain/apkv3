@@ -1,4 +1,4 @@
-import BlogList from "@/components/blogs/blog-list";
+import BlogList from "@/src/components/blogs/blog-list";
 
 async function extractAllBlogs() {
 

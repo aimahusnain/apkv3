@@ -1,4 +1,4 @@
-import FeaturedPost from "@/components/blogs/Featured-post";
+import FeaturedPost from "@/src/components/blogs/Featured-post";
 
 async function extractAllBlogs() {
   try {

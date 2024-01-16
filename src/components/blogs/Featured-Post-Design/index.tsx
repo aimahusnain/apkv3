@@ -1,5 +1,5 @@
-import RightArrow from "@/components/spinner/Right Arrow";
-import { Blog } from "@/utils/types";
+import RightArrow from "@/src/components/spinner/Right Arrow";
+import { Blog } from "@/src/utils/types";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";

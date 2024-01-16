@@ -1,6 +1,6 @@
 "use client"
 
-import { Blog } from "@/utils/types";
+import { Blog } from "@/src/utils/types";
 import FeaturedDesign from "../Featured-Post-Design";
 import { useEffect } from "react";
 import {useRouter} from 'next/navigation'

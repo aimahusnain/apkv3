@@ -8,9 +8,9 @@ import {
   useState,
 } from "react";
 import { useSession } from "next-auth/react";
-import Loader from "@/components/spinner/index";
-import { Blog, BlogFormData } from "@/utils/types";
-import { initialBlogFormData } from "@/utils";
+import Loader from "@/src/components/spinner/index";
+import { Blog, BlogFormData } from "@/src/utils/types";
+import { initialBlogFormData } from "@/src/utils";
 import { usePathname, useRouter } from "next/navigation";
 
 type ContextType = {

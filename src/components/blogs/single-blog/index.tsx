@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Blog } from "@/utils/types";
+import { Blog } from "@/src/utils/types";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
 import { FaTrash } from "react-icons/fa";

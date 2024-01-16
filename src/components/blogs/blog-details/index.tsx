@@ -1,7 +1,7 @@
 "use client";
 
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Blog } from "@/utils/types";
+import { Alert, AlertDescription, AlertTitle } from "@/src/components/ui/alert";
+import { Blog } from "@/src/utils/types";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -13,7 +13,8 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
+} from "@/src/components/ui/accordion";
+import {Button} from '@nextui-org/button'; 
 
 export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
   console.log(blogData, "blogData");
@@ -130,6 +131,7 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                     <p className="text-lg">From Here</p>
                   </div>
                 </Link>
+                    
               </div>
 
               <h1 className="text-6xl font-bold my-4 mt-16 text-center">
@@ -339,49 +341,69 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                   </div>
                 </Alert>
               </div>
-              
+
               <h1 className="text-6xl font-bold my-4 mt-16 text-center">
                 FAQ&apos;s
               </h1>
-              <div className="flex xl:mx-24 gap-5 items-center justify-center flex-wrap flex-row w-full my-6">
-              <Accordion type="single" collapsible>
-  <AccordionItem value="item-1">
-    <AccordionTrigger>Does Alight Motion Support XML Files?</AccordionTrigger>
-    <AccordionContent>
-    Yes, Alight Motion does offer support to the XML files. With the help of this feature you become able to import the files from any source or folder. Thus it makes your own job easier and you get to experience better results.
-    </AccordionContent>
-  </AccordionItem>
-  <AccordionItem value="item-2">
-    <AccordionTrigger>How to remove Watermarks in the Alight Motion App?</AccordionTrigger>
-    <AccordionContent>
-    There are two methods to remove the watermarks from your final products in Alight Motion Mod. Either you buy the premium version and automatically get rid of the watermarks. On the other hand you can download the mod version of Alight Motion which will help you get rid of all the watermarks.
-    </AccordionContent>
-  </AccordionItem>
-  <AccordionItem value="item-3">
-    <AccordionTrigger>How to install Alight Motion Pro on PC?</AccordionTrigger>
-    <AccordionContent>
-      Yes. It adheres to the WAI-ARIA design pattern.
-    </AccordionContent>
-  </AccordionItem>
-  <AccordionItem value="item-4">
-    <AccordionTrigger>How To Use an Alight Motion App on Your Phone?</AccordionTrigger>
-    <AccordionContent>
-      Yes. It adheres to the WAI-ARIA design pattern.
-    </AccordionContent>
-  </AccordionItem>
-  <AccordionItem value="item-5">
-    <AccordionTrigger>Why Use Alight Motion For Android?</AccordionTrigger>
-    <AccordionContent>
-      Yes. It adheres to the WAI-ARIA design pattern.
-    </AccordionContent>
-  </AccordionItem>
-</Accordion>
+              <div className="">
+                <Accordion type="single" collapsible>
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger>
+                      Does Alight Motion Support XML Files?
+                    </AccordionTrigger>
+                    <AccordionContent className="w-96">
+                      Yes, Alight Motion does offer support to the XML files.
+                      With the help of this feature you become able to import
+                      the files from any source or folder. Thus it makes your
+                      own job easier and you get to experience better results.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-2">
+                    <AccordionTrigger>
+                      How to remove Watermarks in the Alight Motion App?
+                    </AccordionTrigger>
+                    <AccordionContent className="w-96">
+                      There are two methods to remove the watermarks from your
+                      final products in Alight Motion Mod. Either you buy the
+                      premium version and automatically get rid of the
+                      watermarks. On the other hand you can download the mod
+                      version of Alight Motion which will help you get rid of
+                      all the watermarks.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-3">
+                    <AccordionTrigger>
+                      How to install Alight Motion Pro on PC?
+                    </AccordionTrigger>
+                    <AccordionContent className="w-96">
+                      Alight Motion Pro can also be downloaded on a PC because
+                      it's obvious users want to create graphics on a big screen
+                      of their laptop or PC. So for this purpose you need to
+                      install an Android emulator like BlueStacks on your PC.
+                      Afterwards you can install the Alight Motion Pro app on
+                      your PC to get it running smoothly.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-4">
+                    <AccordionTrigger>
+                      How To Use an Alight Motion App on Your Phone?
+                    </AccordionTrigger>
+                    <AccordionContent className="w-96">
+                      How To Use an Alight Motion App on Your Phone?
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-5">
+                    <AccordionTrigger>
+                      Why Use Alight Motion For Android?
+                    </AccordionTrigger>
+                    <AccordionContent className="w-96">
+                      Powerful Editing Tool High-Resolution Video Publishing
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </div>
 
-              </div>
-              
-              <div>
-                  
-              </div>
+              <div></div>
 
               {/* <div>
                 <Specification

@@ -1,9 +1,9 @@
 "use client";
 
-import Button from "@/components/button";
-import { GlobalContext } from "@/context";
-import { firebaseConfig, formControls, initialBlogFormData } from "@/utils";
-import { BlogFormData } from "@/utils/types";
+import Button from "@/src/components/button";
+import { GlobalContext } from "@/src/context";
+import { firebaseConfig, formControls, initialBlogFormData } from "@/src/utils";
+import { BlogFormData } from "@/src/utils/types";
 import { initializeApp } from "firebase/app";
 import {
   getDownloadURL,

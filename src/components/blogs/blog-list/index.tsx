@@ -1,9 +1,9 @@
 "use client";
 
-import { useToast } from "@/components/ui/use-toast";
-import { GlobalContext } from "@/context";
-import { categories } from "@/utils";
-import { Blog } from "@/utils/types";
+import { useToast } from "@/src/components/ui/use-toast";
+import { GlobalContext } from "@/src/context";
+import { categories } from "@/src/utils";
+import { Blog } from "@/src/utils/types";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useContext, useEffect, useState } from "react";

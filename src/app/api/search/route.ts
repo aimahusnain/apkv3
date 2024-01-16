@@ -1,6 +1,6 @@
 export const dynamic = 'force-dynamic'
 
-import prisma from "@/database";
+import prisma from "@/src/database";
 import { NextRequest, NextResponse } from "next/server";
 
 export const GET = async (request: NextRequest) => {

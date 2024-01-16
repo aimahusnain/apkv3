@@ -1,8 +1,8 @@
 "use client";
-import SingleBlog from "@/components/blogs/single-blog";
-import Button from "@/components/button";
-import { GlobalContext } from "@/context";
-import { Blog } from "@/utils/types";
+import SingleBlog from "@/src/components/blogs/single-blog";
+import Button from "@/src/components/button";
+import { GlobalContext } from "@/src/context";
+import { Blog } from "@/src/utils/types";
 import { useRouter } from "next/navigation";
 import React, { useContext, useEffect } from "react";
 
