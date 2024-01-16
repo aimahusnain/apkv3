@@ -7,13 +7,7 @@ import { Tooltip } from "@nextui-org/tooltip";
 import { Button } from "@nextui-org/button";
 
 import Link from "next/link";
-// import {
-//   Tooltip,
-//   TooltipContent,
-//   TooltipProvider,
-//   TooltipTrigger,
-// } from "@/src/components/ui/tooltip";
-import Toolytip from "./tooltip";
+
 
 const Footer = () => {
   return (
