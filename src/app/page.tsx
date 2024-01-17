@@ -94,8 +94,7 @@ export default function Blogs() {
         <div>
           <div className="absolute z-[10] p-7 pt-20 w-full h-full">
             <div className="justify-center items-center flex flex-col gap-4">
-              <div
-                className="justify-center items-center flex flex-col gap-4 lg:mx-44 md:mx-16 sm:mx-4">
+              <div className="justify-center items-center flex flex-col gap-4 lg:mx-44 md:mx-16 sm:mx-4">
                 <h1
                   id="title"
                   style={{ scrollMarginTop: "70px" }}
@@ -112,13 +111,8 @@ export default function Blogs() {
                   compositing to visual effects, do it all from your iPhone,
                   iPad, Mac (with Apple Silicon), or Android device.
                 </p>
-
               </div>
-<div className="flex md:flex-row flex-col justify-between sm:-mb-36 mb-0 items-end sm:items-start">
-                <div className="w-96 h-9" />
-                <WhyUseit />
-                <OnthisPage />
-</div>
+              <WhyUseit />
               <div className="flex flex-col gap-8 lg:flex-row flex-wrap w-full items-center justify-center">
                 <Link
                   href="/"
@@ -146,6 +140,8 @@ export default function Blogs() {
               <div className="w-full sm:px-36 px-0  ">
                 <AlightMotionSpecifications />
               </div>
+              
+              <OnthisPage />
 
               <AlreadyFeatures />
 
