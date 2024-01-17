@@ -42,20 +42,6 @@ export default function Header() {
   
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  
-  const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
-  ];
-
   return (
     <Navbar
       shouldHideOnScroll
@@ -124,7 +110,7 @@ export default function Header() {
         
         
                     {mymenuitems.map((item: MenuItem, index: number) => (
-  <NavbarMenuItem key={index} className="flex items-center justify-center h-full py-14 text-3xl">
+  <NavbarMenuItem key={index} className="flex !items-start justify-center gap-10 h-fit text-3xl">
     <Link
       href={item.path}
       color="foreground"

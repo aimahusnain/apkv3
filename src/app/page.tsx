@@ -17,7 +17,13 @@ import { RiTwitterXFill } from "react-icons/ri";
 import { MdOutlineFacebook } from "react-icons/md";
 import { SlSocialYoutube } from "react-icons/sl";
 import { Tooltip } from "@nextui-org/tooltip";
-import { Accordion, AccordionItem } from "@nextui-org/accordion";
+// import { Accordion, AccordionItem } from "@nextui-org/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/src/components/ui/accordion";
 
 async function extractAllBlogs() {
   try {
@@ -109,6 +115,10 @@ export default function Blogs() {
                 className="justify-center items-center flex flex-col gap-4 
             lg:mx-44 md:mx-16 sm:mx-4"
               >
+              {/* <Link href="#faqs" className="transition-all">
+  Go to FAQ's
+</Link> */}
+
                 <h1 className="sm:text-5xl text-4xl font-bold text-center">
                   Alight Motion MOD APK 2024 with Pro Features, No Watermark,
                   and Ad-Free Experience!
@@ -241,7 +251,7 @@ export default function Blogs() {
                     <Tab
                       key="photoframes"
                       title={
-                        <div className="flex items-center space-x-2">
+                        <div className="flex flex-col flex-wrap items-center space-x-2">
                           <span>Several Photo Frames</span>
                         </div>
                       }
@@ -256,7 +266,7 @@ export default function Blogs() {
                         </CardBody>
                       </Card>
                     </Tab>
-
+                    
                     <Tab
                       key="editing-materials"
                       title={
@@ -380,7 +390,7 @@ export default function Blogs() {
                 </div>
               </div>
 
-              <h1 className="text-6xl font-bold my-4 mt-16 text-center">
+              <h1 className="text-5xl font-bold my-4 mt-16 text-center">
                 Alight Motion Specifications
               </h1>
               <div className="flex xl:mx-24 gap-5 items-center justify-center flex-wrap flex-row w-full my-6">
@@ -527,11 +537,66 @@ export default function Blogs() {
                 </Alert>
               </div>
 
-              <h1 className="text-6xl font-bold my-4 mt-16 text-center">
+              <h1 id="faqs" className="text-6xl font-bold my-4 mt-16 text-center">
                 FAQ&apos;s
               </h1>
               <div className="">
-                <Accordion variant="bordered" className="sm:w-96 w-full">
+              <Accordion type="single" collapsible>
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger className="sm:w-96 w-full text-left">
+                      Does Alight Motion Support XML Files?
+                    </AccordionTrigger>
+                    <AccordionContent className="sm:w-96 w-full text-left">
+                      Yes, Alight Motion does offer support to the XML files.
+                      With the help of this feature you become able to import
+                      the files from any source or folder. Thus it makes your
+                      own job easier and you get to experience better results.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-2">
+                    <AccordionTrigger className="sm:w-96 w-full text-left">
+                      How to remove Watermarks in the Alight Motion App?
+                    </AccordionTrigger>
+                    <AccordionContent className="sm:w-96 w-full text-left">
+                      There are two methods to remove the watermarks from your
+                      final products in Alight Motion Mod. Either you buy the
+                      premium version and automatically get rid of the
+                      watermarks. On the other hand you can download the mod
+                      version of Alight Motion which will help you get rid of
+                      all the watermarks.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-3">
+                    <AccordionTrigger className="sm:w-96 w-full text-left">
+                      How to install Alight Motion Pro on PC?
+                    </AccordionTrigger>
+                    <AccordionContent className="sm:w-96 w-full text-left">
+                      Alight Motion Pro can also be downloaded on a PC because
+                      it&apos;s obvious users want to create graphics on a big
+                      screen of their laptop or PC. So for this purpose you need
+                      to install an Android emulator like BlueStacks on your PC.
+                      Afterwards you can install the Alight Motion Pro app on
+                      your PC to get it running smoothly.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-4">
+                    <AccordionTrigger className="sm:w-96 w-full text-left">
+                      How To Use an Alight Motion App on Your Phone?
+                    </AccordionTrigger>
+                    <AccordionContent className="sm:w-96 w-full text-left">
+                      How To Use an Alight Motion App on Your Phone?
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-5">
+                    <AccordionTrigger className="sm:w-96 w-full text-left">
+                      Why Use Alight Motion For Android?
+                    </AccordionTrigger>
+                    <AccordionContent className="sm:w-96 w-full text-left">
+                      Powerful Editing Tool High-Resolution Video Publishing
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+                {/* <Accordion variant="bordered" className="sm:w-96 w-full">
                   <AccordionItem
                     key="1"
                     aria-label="Does Alight Motion Support XML Files?"
@@ -582,12 +647,12 @@ export default function Blogs() {
                     {" "}
                     Powerful Editing Tool, High-Resolution Video Publishing
                   </AccordionItem>
-                </Accordion>
+                </Accordion> */}
               </div>
 
               <div className="flex flex-col text-center p-8">
                 <div className="h-fit flex gap-14 py-8 justify-center">
-                  <Tooltip content="Instagram">
+                  <Tooltip showArrow={true} content="Instagram">
                     <Link
                       target="_blank"
                       href="https://www.instagram.com/alightmotion"
@@ -599,7 +664,7 @@ export default function Blogs() {
                     </Link>
                   </Tooltip>
 
-                  <Tooltip content="Twitter">
+                  <Tooltip showArrow={true} content="Twitter">
                     <Link
                       target="_blank"
                       href="https://twitter.com/alightcreative"
@@ -611,7 +676,7 @@ export default function Blogs() {
                     </Link>
                   </Tooltip>
 
-                  <Tooltip content="Facebook">
+                  <Tooltip showArrow={true} content="Facebook">
                     <Link
                       target="_blank"
                       href="https://www.facebook.com/alightcreative"
@@ -623,7 +688,7 @@ export default function Blogs() {
                     </Link>
                   </Tooltip>
 
-                  <Tooltip content="Youtube">
+                  <Tooltip showArrow={true} content="Youtube">
                     <Link
                       target="_blank"
                       href="https://youtube.com/alightmotion"
