@@ -30,7 +30,7 @@ const OnthisPage = () => {
         </button>
 
         <button onClick={(e) => handleSmoothScroll(e, "faqs")}>
-          Go to FAQ's
+          Go to FAQ&apos;s
         </button>
       </div>
     </div>
