@@ -12,6 +12,7 @@ const OnthisPage = () => {
       });
     }
   }
+
   return (
     <div className="w-72 p-4 flex flex-col gap-2">
       <h2 className="text-xl font-bold">On This Page</h2>
@@ -19,11 +20,11 @@ const OnthisPage = () => {
         <button onClick={(e) => handleSmoothScroll(e, "title")} className="text-left">
           Title
         </button>
-        
+
         <button onClick={(e) => handleSmoothScroll(e, "download")} className="text-left">
           Download
         </button>
-        
+
         <button onClick={(e) => handleSmoothScroll(e, "specifications")} className="text-left">
           Alight Motion Specifications
         </button>
@@ -37,11 +38,11 @@ const OnthisPage = () => {
         </button>
 
         <button onClick={(e) => handleSmoothScroll(e, "howtodownload")} className="text-left">
-        How to Download
+          How to Download
         </button>
-        
+
         <button onClick={(e) => handleSmoothScroll(e, "conclusion")} className="text-left">
-        Conclusion
+          Conclusion
         </button>
       </div>
     </div>

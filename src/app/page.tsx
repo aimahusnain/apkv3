@@ -202,7 +202,7 @@ export default function Blogs() {
                     </Link>
                   </Tooltip>
                 </div>
-                <p className="text-white/40 text-xs">
+                <p id='conclusion' className="text-white/40 text-xs">
                   Copyright © Splice Video Editor S.r.l. | Corso Como 15, 20154
                   Milan, Italy | VAT, tax code, and number of registration with
                   the Milan Monza Brianza Lodi Company Register 11505810967 |
@@ -228,6 +228,7 @@ export default function Blogs() {
             className="hidden sm:block h-full w-full absolute top-[600px]"
           />
           <img
+          
             src="/vertical_stars.png"
             alt=""
             className="sm:hidden h-full w-full absolute top-[500px]"
