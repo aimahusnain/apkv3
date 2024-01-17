@@ -230,16 +230,7 @@ export default function Blogs() {
                 image="vector_illustration.gif"
               />
             </div>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+
             <div className=" text-lg flex xl:mx-24 gap-5 items-center text-center justify-center flex-wrap flex-row w-full my-6">
               
               <div className="flex w-full flex-col px-32">
