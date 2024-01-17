@@ -95,9 +95,7 @@ export default function Blogs() {
           <div className="absolute z-[10] p-7 pt-20 w-full h-full">
             <div className="justify-center items-center flex flex-col gap-4">
               <div
-                className="justify-center items-center flex flex-col gap-4 
-            lg:mx-44 md:mx-16 sm:mx-4"
-              >
+                className="justify-center items-center flex flex-col gap-4 lg:mx-44 md:mx-16 sm:mx-4">
                 <h1
                   id="title"
                   style={{ scrollMarginTop: "70px" }}
@@ -115,10 +113,13 @@ export default function Blogs() {
                   iPad, Mac (with Apple Silicon), or Android device.
                 </p>
 
-                <WhyUseit />
               </div>
-              <div className="flex flex-col gap-8 lg:flex-row flex-wrap w-full items-center justify-center lg:justify-between">
-                <div className="ml-52" />
+<div className="flex md:flex-row flex-col justify-between sm:-mb-36 mb-0 items-end sm:items-start">
+                <div className="w-96 h-9" />
+                <WhyUseit />
+                <OnthisPage />
+</div>
+              <div className="flex flex-col gap-8 lg:flex-row flex-wrap w-full items-center justify-center">
                 <Link
                   href="/"
                   className="bg-black h-fit border mt-7 px-4 p-3 gap-3 border-white rounded-xl flex flex-row items-center"
@@ -130,6 +131,7 @@ export default function Blogs() {
                     className="aspect-square rounded-xl"
                     alt="Alight Motion Logo"
                   />
+
                   <div className="flex flex-col text-left">
                     <p
                       id="download"
@@ -140,9 +142,8 @@ export default function Blogs() {
                     <p className="text-lg">From Here</p>
                   </div>
                 </Link>
-                <OnthisPage />
               </div>
-              <div className="w-full px-36">
+              <div className="w-full sm:px-36 px-0  ">
                 <AlightMotionSpecifications />
               </div>
 

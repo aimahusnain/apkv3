@@ -3,7 +3,7 @@ import React from "react";
 const Downloadingsteps = () => {
   return (
     <div className="mx-0 sm:mx-64">
-      <h1 className="text-6xl font-bold my-4 mt-16 text-center">
+      <h1 id="howtodownload" style={{ scrollMarginTop: "30px" }} className="text-6xl font-bold my-4 mt-16 text-center">
       How to download Alight Motion Pro
       </h1>
       <p className='border border-zinc-500 rounded-xl p-5 text-justify space-y-5'>
@@ -22,7 +22,7 @@ const Downloadingsteps = () => {
             device.
           </li>
         </ul>
-        <p id="howtodownload">
+        <p>
           Now you can also download Worms Zone MOD APK, an amazing snake game
           with all the premium features unlocked.
         </p>
