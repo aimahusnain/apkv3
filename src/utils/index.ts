@@ -13,7 +13,7 @@ export const sortBlogs = (blogs: any) => {
     );
 };
 
-export const menuItems : MenuItem[] = [
+export const mymenuitems : MenuItem[] = [
   {
     id: "home",
     label: "Home",
@@ -22,17 +22,20 @@ export const menuItems : MenuItem[] = [
   {
     id: "category",
     label: "Category",
-    path: "/category/application",
+    // path: "/category/application",
+    path: "/#",
   },
   {
     id: "blogs",
     label: "Blogs",
-    path: "/blogs",
+    // path: "/blogs",
+    path: "/#",
   },
   {
     id: "search",
     label: "Search",
-    path: "/search",
+    path: "/#",
+    // path: "/search",
   },
   
 ];

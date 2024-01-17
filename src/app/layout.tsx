@@ -30,7 +30,7 @@ export default function RootLayout({
               <Providers>
               {children}
               </Providers>
-              <Footer />
+              {/* <Footer /> */}
               <Toaster />
             </GlobalState>
           </NextAuthProvider>
