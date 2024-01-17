@@ -360,7 +360,6 @@ export default function Blogs() {
                         </CardBody>
                       </Card>
                     </Tab>
-                    
                     <Tab
                       key="color"
                       title={
