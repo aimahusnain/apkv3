@@ -238,7 +238,7 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
         aria-label="Options"         
         selectedKey={selected}
         color="primary" variant="bordered"
-        onSelectionChange={(key: Key) => {setSelected(key)}} // Adjust this line
+        // onSelectionChange={(key: Key) => {setSelected(key)}} // Adjust this line
         >
         <Tab key="photos" title={
             <div className="flex items-center space-x-2">

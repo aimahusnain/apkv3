@@ -48,6 +48,8 @@ async function extractAllBlogs() {
   }
 }
 
+type Key = "photos" | "music" | "videos";
+
 
 export default function Blogs() {
   const [selected, setSelected] = React.useState<any>("photos");
@@ -245,7 +247,7 @@ export default function Blogs() {
       aria-label="Options"         
       selectedKey={selected}
       color="primary" variant="bordered"
-      onSelectionChange={(key: Key) => {setSelected(key)}} // Adjust this line
+      // onSelectionChange={(key: Key) => {setSelected(key)}} // Adjust this line
       >
       <Tab key="photos" title={
           <div className="flex items-center space-x-2">
