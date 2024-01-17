@@ -233,12 +233,12 @@ export default function Blogs() {
 
             <div className=" text-lg flex xl:mx-24 gap-5 items-center text-center justify-center flex-wrap flex-row w-full my-6">
               
-              <div className="flex w-full flex-col px-32">
+              <div className="flex w-full flex-col px-0 sm:px-32">
     <Tabs 
       aria-label="Options"         
       selectedKey={selected}
       color="primary" variant="bordered"
-      // onSelectionChange={(key: Key) => {setSelected(key)}} // Adjust this line
+      onSelectionChange={(key: any) => {setSelected(key)}} // Adjust this line
       >
       <Tab key="photos" title={
           <div className="flex items-center space-x-2">
@@ -284,7 +284,7 @@ export default function Blogs() {
               Alight Motion Specifications
             </h1>
             <div className="flex xl:mx-24 gap-5 items-center justify-center flex-wrap flex-row w-full my-6">
-              <Alert className="w-fit h-24 flex gap-3 flex-row items-left justify-center">
+              <Alert className="w-fit h-24 hover:bg-primary/30 cursor-pointer transition-all flex gap-3 flex-row items-left justify-center">
                 <div className="flex-col w-fit h-full flex items-center justify-center">
                   <IoStarSharp className="h-4 w-4" />
                 </div>
@@ -296,7 +296,7 @@ export default function Blogs() {
                 </div>
               </Alert>
 
-              <Alert className="w-fit h-24 flex gap-3 flex-row items-left justify-center">
+              <Alert className="w-fit h-24 hover:bg-primary/30 cursor-pointer transition-all flex gap-3 flex-row items-left justify-center">
                 <div className="flex-col w-fit h-full flex items-center justify-center">
                   <IoStarSharp className="h-4 w-4" />
                 </div>
@@ -306,7 +306,7 @@ export default function Blogs() {
                 </div>
               </Alert>
 
-              <Alert className="w-fit h-24 flex gap-3 flex-row items-left justify-center">
+              <Alert className="w-fit h-24 hover:bg-primary/30 cursor-pointer transition-all flex gap-3 flex-row items-left justify-center">
                 <div className="flex-col w-fit h-full flex items-center justify-center">
                   <IoStarSharp className="h-4 w-4" />
                 </div>
@@ -318,7 +318,7 @@ export default function Blogs() {
                 </div>
               </Alert>
 
-              <Alert className="w-fit h-24 flex gap-3 flex-row items-left justify-center">
+              <Alert className="w-fit h-24 hover:bg-primary/30 cursor-pointer transition-all flex gap-3 flex-row items-left justify-center">
                 <div className="flex-col w-fit h-full flex items-center justify-center">
                   <IoStarSharp className="h-4 w-4" />
                 </div>
@@ -329,7 +329,7 @@ export default function Blogs() {
                   <AlertDescription>December 15, 2023</AlertDescription>
                 </div>
               </Alert>
-              <Alert className="w-fit h-24 flex gap-3 flex-row items-left justify-center">
+              <Alert className="w-fit h-24 hover:bg-primary/30 cursor-pointer transition-all flex gap-3 flex-row items-left justify-center">
                 <div className="flex-col w-fit h-full flex items-center justify-center">
                   <IoStarSharp className="h-4 w-4" />
                 </div>
@@ -341,18 +341,18 @@ export default function Blogs() {
                 </div>
               </Alert>
 
-              <Alert className="w-fit h-24 flex gap-3 flex-row items-left justify-center">
+              <Alert className="w-fit h-24 hover:bg-primary/30 cursor-pointer transition-all flex gap-3 flex-row items-left justify-center">
                 <div className="flex-col w-fit h-full flex items-center justify-center">
                   <IoStarSharp className="h-4 w-4" />
                 </div>
 
-                <div className="flex flex-col h-full justify-center">
+                <div className="flex flex-col h-full justify-center hover:bg-primary/30 cursor-pointer transition-all">
                   <AlertTitle className="text-primary">File Type</AlertTitle>
                   <AlertDescription>APK</AlertDescription>
                 </div>
               </Alert>
 
-              <Alert className="w-fit h-24 flex gap-3 flex-row items-left justify-center">
+              <Alert className="w-fit h-24 hover:bg-primary/30 cursor-pointer transition-all flex gap-3 flex-row items-left justify-center">
                 <div className="flex-col w-fit h-full flex items-center justify-center">
                   <IoStarSharp className="h-4 w-4" />
                 </div>
@@ -362,7 +362,7 @@ export default function Blogs() {
                   <AlertDescription>100% Free</AlertDescription>
                 </div>
               </Alert>
-              <Alert className="w-fit h-24 items-left flex gap-3 flex-row justify-center">
+              <Alert className="w-fit h-24 items-left hover:bg-primary/30 cursor-pointer transition-all flex gap-3 flex-row justify-center">
                 <div className="flex-col w-fit h-full flex items-center justify-center">
                   <IoStarSharp className="h-4 w-4" />
                 </div>
@@ -373,7 +373,7 @@ export default function Blogs() {
                 </div>
               </Alert>
 
-              <Alert className=" w-48 h-24 items-left flex gap-3 flex-row justify-center">
+              <Alert className=" w-48 h-24 items-left hover:bg-primary/30 cursor-pointer transition-all flex gap-3 flex-row justify-center">
                 <div className="flex-col w-fit h-full flex items-center justify-center">
                   <IoStarSharp className="h-4 w-4" />
                 </div>
@@ -384,7 +384,7 @@ export default function Blogs() {
                   </AlertDescription>
                 </div>
               </Alert>
-              <Alert className="w-52 h-24 items-left flex gap-3 flex-row justify-center">
+              <Alert className="w-52 h-24 items-left hover:bg-primary/30 cursor-pointer transition-all flex gap-3 flex-row justify-center">
                 <div className="flex-col w-fit h-full flex items-center justify-center">
                   <IoStarSharp className="h-4 w-4" />
                 </div>
@@ -398,7 +398,7 @@ export default function Blogs() {
                   </AlertDescription>
                 </div>
               </Alert>
-              <Alert className="w-fit h-24 items-left flex gap-3 flex-row justify-center">
+              <Alert className="w-fit h-24 items-left hover:bg-primary/30 cursor-pointer transition-all flex gap-3 flex-row justify-center">
                 <div className="flex-col w-fit h-full flex items-center justify-center">
                   <IoStarSharp className="h-4 w-4" />
                 </div>
@@ -412,7 +412,7 @@ export default function Blogs() {
                   </AlertDescription>
                 </div>
               </Alert>
-              <Alert className="w-fit h-24 items-left flex gap-3 flex-row justify-center">
+              <Alert className="w-fit h-24 items-left hover:bg-primary/30 cursor-pointer transition-all flex gap-3 flex-row justify-center">
                 <div className="flex-col w-fit h-full flex items-center justify-center">
                   <IoStarSharp className="h-4 w-4" />
                 </div>
@@ -433,10 +433,10 @@ export default function Blogs() {
             <div className="">
               <Accordion type="single" collapsible>
                 <AccordionItem value="item-1">
-                  <AccordionTrigger>
+                  <AccordionTrigger className="sm:w-96 w-full text-left">
                     Does Alight Motion Support XML Files?
                   </AccordionTrigger>
-                  <AccordionContent className="w-96">
+                  <AccordionContent className="sm:w-96 w-full text-left">
                     Yes, Alight Motion does offer support to the XML files.
                     With the help of this feature you become able to import
                     the files from any source or folder. Thus it makes your
@@ -444,10 +444,10 @@ export default function Blogs() {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-2">
-                  <AccordionTrigger>
+                  <AccordionTrigger className="sm:w-96 w-full text-left">
                     How to remove Watermarks in the Alight Motion App?
                   </AccordionTrigger>
-                  <AccordionContent className="w-96">
+                  <AccordionContent className="sm:w-96 w-full text-left">
                     There are two methods to remove the watermarks from your
                     final products in Alight Motion Mod. Either you buy the
                     premium version and automatically get rid of the
@@ -457,10 +457,10 @@ export default function Blogs() {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-3">
-                  <AccordionTrigger>
+                  <AccordionTrigger className="sm:w-96 w-full text-left">
                     How to install Alight Motion Pro on PC?
                   </AccordionTrigger>
-                  <AccordionContent className="w-96">
+                  <AccordionContent className="sm:w-96 w-full text-left">
                     Alight Motion Pro can also be downloaded on a PC because
                     it&apos;s obvious users want to create graphics on a big
                     screen of their laptop or PC. So for this purpose you need
@@ -470,18 +470,18 @@ export default function Blogs() {
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-4">
-                  <AccordionTrigger>
+                  <AccordionTrigger className="sm:w-96 w-full text-left">
                     How To Use an Alight Motion App on Your Phone?
                   </AccordionTrigger>
-                  <AccordionContent className="w-96">
+                  <AccordionContent className="sm:w-96 w-full text-left">
                     How To Use an Alight Motion App on Your Phone?
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-5">
-                  <AccordionTrigger>
+                  <AccordionTrigger className="sm:w-96 w-full text-left">
                     Why Use Alight Motion For Android?
                   </AccordionTrigger>
-                  <AccordionContent className="w-96">
+                  <AccordionContent className="sm:w-96 w-full text-left">
                     Powerful Editing Tool High-Resolution Video Publishing
                   </AccordionContent>
                 </AccordionItem>
