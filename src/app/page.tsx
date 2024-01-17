@@ -14,6 +14,7 @@ import AlreadyFeatures from "../components/blogs/AlreadyFeatures";
 import FAQ from "../components/blogs/Faq";
 import WhyUseit from "../components/blogs/WhyUseit";
 import { Button } from "@nextui-org/button";
+import OnthisPage from "../components/blogs/OnthisPage";
 
 async function extractAllBlogs() {
   try {
@@ -56,29 +57,7 @@ export default function Blogs() {
       clearInterval(interval);
     };
   }, []);
-
-  function handleSmoothScroll(e: any, element: string) {
-    e.preventDefault();
-
-    const targetElement = document.getElementById(element);
-    if (targetElement) {
-      window.scrollTo({
-        top: targetElement.offsetTop,
-        behavior: "smooth",
-      });
-    }
-  }
-
-  // const blogPostsList = await extractAllBlogs();
-
-  // if (!blogPostsList || blogPostsList.length === 0) {
-  //   // Handle the case where there are no blog posts or an error occurred
-  //   return <div>No featured posts available.</div>;
-  // }
-
-  // const featuredPost = blogPostsList.find((post: any) => post.isFeatured);
-  // console.log("Featured Post:", featuredPost);
-
+  
   return (
     <>
       <div>
@@ -126,11 +105,11 @@ export default function Blogs() {
                 </h1>
 
                 <p className="sm:text-[1.2rem] text-[1rem] sm:leading-[30px] leading-[25px] text-[#a6a6a6] text-center sm:mx-14 mx-2">
-                  {`Create stunning motion designs, videos, and animations with the
-              world's first professional motion graphics toolset for mobile
+                  Create stunning motion designs, videos, and animations with the
+              world&apos;s first professional motion graphics toolset for mobile
               platforms. From keyframe animation to video compositing to
               visual effects, do it all from your iPhone, iPad, Mac (with
-                Apple Silicon), or Android device.`.replace("'", "&apos;")}
+                Apple Silicon), or Android device.
                 </p>
                 <WhyUseit />
 
@@ -153,41 +132,8 @@ export default function Blogs() {
                   </div>
                 </Link>
               </div>
-              <div>
-                <h2>On This Page</h2>
-                <div className="flex flex-col items-start justify-center">
-                  <button
-                    onClick={(e) =>
-                      handleSmoothScroll(
-                        e,
-                        "title"
-                      )
-                    }
-                  >
-                    Alight Motion MOD APK 2024 with Pro Features, No Watermark,
-                    and Ad-Free Experience!
-                  </button>
-                  
-                  <button
-                    onClick={(e) => handleSmoothScroll(e, "specifications")}
-                  >
-                    Alight Motion Specifications
-                  </button>
-                  
-                  <button
-                    onClick={(e) => handleSmoothScroll(e, "features")}
-                  >
-Alight Motion Features
-                  </button>
-                  
-
-                  <button
-                    onClick={(e) => handleSmoothScroll(e, "faqs")}
-                  >
-                    Go to FAQ's
-                  </button>
-                </div>
-              </div>
+              
+              <OnthisPage />
 
               <AlightMotionSpecifications />
 
@@ -246,12 +192,12 @@ Alight Motion Features
                   </Tooltip>
                 </div>
                 <p className="text-white/40 text-xs">
-                  Copyright © Splice Video Editor S.r.l. | Corso Como 15, 20154
-                  Milan, Italy | VAT, tax code, and number of registration with
-                  the Milan Monza Brianza Lodi Company Register 11505810967 |
-                  REA number MI 2608304 | Contributed capital €10.000,00 | Sole
-                  shareholder company subject to the management and coordination
-                  of Bending Spoons S.p.A.{" "}
+                Copyright © Splice Video Editor S.r.l. | Corso Como 15, 20154
+  Milan, Italy | VAT, tax code, and number of registration with
+  the Milan Monza Brianza Lodi Company Register 11505810967 |
+  REA number MI 2608304 | Contributed capital €10.000,00 | Sole
+  shareholder company subject to the management and coordination
+  of Bending Spoons S.p.A.{" "}
                 </p>
               </div>
             </div>
