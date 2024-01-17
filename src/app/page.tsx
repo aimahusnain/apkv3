@@ -14,9 +14,14 @@ import { IoStarSharp } from "react-icons/io5";
 import { MdOutlineFacebook } from "react-icons/md";
 import { RiTwitterXFill } from "react-icons/ri";
 import { SlSocialYoutube } from "react-icons/sl";
-// import { Accordion, AccordionItem } from "@nextui-org/accordion";
+import {
+  ResizableHandle,
+  ResizablePanel,
+  ResizablePanelGroup,
+} from "@/src/components/ui/resizable";
 
 import FAQ from "../components/blogs/Faq";
+import MyFeature from "../components/blogs/myFeature";
 
 async function extractAllBlogs() {
   try {
@@ -108,7 +113,7 @@ export default function Blogs() {
                 className="justify-center items-center flex flex-col gap-4 
             lg:mx-44 md:mx-16 sm:mx-4"
               >
-              {/* <Link href="#faqs" className="transition-all">
+                {/* <Link href="#faqs" className="transition-all">
   Go to FAQ's
 </Link> */}
 
@@ -229,9 +234,8 @@ export default function Blogs() {
                 />
               </div>
 
-              <div className=" text-lg flex xl:mx-24 gap-5 items-center text-center justify-center flex-wrap flex-row w-full my-6">
-                <div className="flex w-full flex-col px-0 sm:px-32">
-                  <Tabs
+              <div className="flex xl:mx-24 gap-5 items-center justify-center flex-wrap flex-row w-full my-6">
+                {/* <Tabs
                     aria-label="Options"
                     selectedKey={selected}
                     color="primary"
@@ -379,8 +383,203 @@ export default function Blogs() {
                         </CardBody>
                       </Card>
                     </Tab>
-                  </Tabs>
-                </div>
+                  </Tabs> */}
+
+                {/* <ResizablePanelGroup
+                  direction="vertical"
+                  className="min-h-[200px] max-w-xs rounded-lg border"
+                >
+                  <ResizablePanel defaultSize={25}>
+                    <div className="flex h-full items-center justify-center">
+                      <span className="font-semibold">
+                        Several Photo Frames
+                      </span>
+                    </div>
+                  </ResizablePanel>
+                  <ResizableHandle className="bg-white" />
+                  <ResizablePanel defaultSize={75} className="p-7">
+                    <div className="flex h-full items-center justify-center">
+                      <span className="font-semibold">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Neque commodi ut placeat ea blanditiis expedita quis
+                        nesciunt voluptas.
+                      </span>
+                    </div>
+                  </ResizablePanel>
+                </ResizablePanelGroup>
+                
+                <ResizablePanelGroup
+                  direction="vertical"
+                  className="min-h-[200px] max-w-xs rounded-lg border"
+                >
+                  <ResizablePanel defaultSize={25}>
+                    <div className="flex h-full items-center justify-center">
+                      <span className="font-semibold">
+                        Import your own editing materials
+                      </span>
+                    </div>
+                  </ResizablePanel>
+                  <ResizableHandle className="bg-white" />
+                  <ResizablePanel defaultSize={75} className="p-7">
+                    <div className="flex h-full items-center justify-center">
+                      <span className="font-semibold">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Nihil ratione provident eum illum, harum non
+                        necessitatibus ipsum. At officiis, delectus itaque.
+                      </span>
+                    </div>
+                  </ResizablePanel>
+                </ResizablePanelGroup>
+
+                <ResizablePanelGroup
+                  direction="vertical"
+                  className="min-h-[200px] max-w-xs rounded-lg border"
+                >
+                  <ResizablePanel defaultSize={25}>
+                    <div className="flex h-full items-center justify-center">
+                      <span className="font-semibold">
+                        Download from the library
+                      </span>
+                    </div>
+                  </ResizablePanel>
+                  <ResizableHandle className="bg-white" />
+                  <ResizablePanel defaultSize={75} className="p-7">
+                    <div className="flex h-full items-center justify-center">
+                      <span className="font-semibold">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Excepturi facilis, nostrum dolores quisquam perferendis
+                        laboriosam, molestias consequuntur eaque consequatur
+                        reiciendis neque?
+                      </span>
+                    </div>
+                  </ResizablePanel>
+                </ResizablePanelGroup>
+
+                <ResizablePanelGroup
+                  direction="vertical"
+                  className="min-h-[200px] max-w-xs rounded-lg border"
+                >
+                  <ResizablePanel defaultSize={25}>
+                    <div className="flex h-full items-center justify-center">
+                      <span className="font-semibold">
+                        Quickly save your favorite elements
+                      </span>
+                    </div>
+                  </ResizablePanel>
+                  <ResizableHandle className="bg-white" />
+                  <ResizablePanel defaultSize={75} className="p-7">
+                    <div className="flex h-full items-center justify-center">
+                      <span className="font-semibold">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Excepturi facilis, nostrum dolores quisquam perferendis
+                        laboriosam, molestias consequuntur eaque consequatur
+                        reiciendis neque?
+                      </span>
+                    </div>
+                  </ResizablePanel>
+                </ResizablePanelGroup>
+
+                <ResizablePanelGroup
+                  direction="vertical"
+                  className="min-h-[200px] max-w-xs rounded-lg border"
+                >
+                  <ResizablePanel defaultSize={25}>
+                    <div className="flex h-full items-center justify-center">
+                      <span className="font-semibold">
+                        Produce Video in Different Aspect Ratio.
+                      </span>
+                    </div>
+                  </ResizablePanel>
+                  <ResizableHandle className="bg-white" />
+                  <ResizablePanel defaultSize={75} className="p-7">
+                    <div className="flex h-full items-center justify-center">
+                      <span className="font-semibold">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestiae corrupti officiis voluptatibus voluptatem
+                        maxime dignissimos, possimus sit distinctio eveniet
+                        optio, omnis aperiam sapiente eos!
+                      </span>
+                    </div>
+                  </ResizablePanel>
+                </ResizablePanelGroup>
+
+                <ResizablePanelGroup
+                  direction="vertical"
+                  className="min-h-[200px] max-w-xs rounded-lg border"
+                >
+                  <ResizablePanel defaultSize={25}>
+                    <div className="flex h-full items-center justify-center">
+                      <span className="font-semibold">Blending Modes</span>
+                    </div>
+                  </ResizablePanel>
+                  <ResizableHandle className="bg-white" />
+                  <ResizablePanel defaultSize={75} className="p-7">
+                    <div className="flex h-full items-center justify-center">
+                      <span className="font-semibold">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestiae corrupti officiis voluptatibus voluptatem
+                        maxime dignissimos, possimus sit distinctio eveniet
+                        optio, omnis aperiam sapiente eos!
+                      </span>
+                    </div>
+                  </ResizablePanel>
+                </ResizablePanelGroup>
+
+                <ResizablePanelGroup
+                  direction="vertical"
+                  className="min-h-[200px] max-w-xs rounded-lg border"
+                >
+                  <ResizablePanel defaultSize={25}>
+                    <div className="flex h-full items-center justify-center">
+                      <span className="font-semibold">
+                        2000+ Built-in Fonts
+                      </span>
+                    </div>
+                  </ResizablePanel>
+                  <ResizableHandle className="bg-white" />
+                  <ResizablePanel defaultSize={75} className="p-7">
+                    <div className="flex h-full items-center justify-center">
+                      <span className="font-semibold">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestiae corrupti officiis voluptatibus voluptatem
+                        maxime dignissimos, possimus sit distinctio eveniet
+                        optio, omnis aperiam sapiente eos!
+                      </span>
+                    </div>
+                  </ResizablePanel>
+                </ResizablePanelGroup>
+
+                <ResizablePanelGroup
+                  direction="vertical"
+                  className="min-h-[200px] max-w-xs rounded-lg border"
+                >
+                  <ResizablePanel defaultSize={25}>
+                    <div className="flex h-full items-center justify-center">
+                      <span className="font-semibold">Significant Color</span>
+                    </div>
+                  </ResizablePanel>
+                  <ResizableHandle className="bg-white" />
+                  <ResizablePanel defaultSize={75} className="p-7">
+                    <div className="flex h-full items-center justify-center">
+                      <span className="font-semibold">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestiae corrupti officiis voluptatibus voluptatem
+                        maxime dignissimos, possimus sit distinctio eveniet
+                        optio, omnis aperiam sapiente eos!
+                      </span>
+                    </div>
+                  </ResizablePanel>
+                </ResizablePanelGroup> */}
+                
+                
+                <MyFeature title="Several Photo Frames" />
+                <MyFeature title="Import your own editing materials" />
+                <MyFeature title="Download from the library" />
+                <MyFeature title="Quickly save your favorite elements" />
+                <MyFeature title="Produce Video in Different Aspect Ratio." />
+                <MyFeature title="Blending Modes" />
+                <MyFeature title="2000+ Built-in Fonts" />
+                <MyFeature title="Significant Color" />
               </div>
 
               <h1 className="text-5xl font-bold my-4 mt-16 text-center">
@@ -530,10 +729,9 @@ export default function Blogs() {
                 </Alert>
               </div>
 
+              <div className="flex flex-col text-center px-8 pb-14">
+                <FAQ />
 
-              <div className="flex flex-col text-center p-8">
-              <FAQ />
-              
                 <div className="h-fit flex gap-14 py-8 justify-center">
                   <Tooltip showArrow={true} content="Instagram">
                     <Link

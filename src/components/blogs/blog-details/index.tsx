@@ -16,8 +16,8 @@ import {
   AccordionTrigger,
 } from "@/src/components/ui/accordion";
 import { Button } from "@nextui-org/button";
-import {Tab, Tabs} from "@nextui-org/tabs";
-import {Card, CardBody, CardHeader} from "@nextui-org/card";
+import { Tab, Tabs } from "@nextui-org/tabs";
+import { Card, CardBody, CardHeader } from "@nextui-org/card";
 
 type Key = "photos" | "music" | "videos";
 
@@ -108,7 +108,8 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
               lg:mx-44 md:mx-16 sm:mx-4"
               >
                 <h1 className="sm:text-5xl text-4xl font-bold text-center">
-                Alight Motion MOD APK 2024 with Pro Features, No Watermark, and Ad-Free Experience!
+                  Alight Motion MOD APK 2024 with Pro Features, No Watermark,
+                  and Ad-Free Experience!
                 </h1>
 
                 <p className="sm:text-[1.2rem] text-[1rem] sm:leading-[30px] leading-[25px] text-[#a6a6a6] text-center sm:mx-14 mx-2">
@@ -221,65 +222,59 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                   image="vector_illustration.gif"
                 />
               </div>
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
+
               <div className=" text-lg flex xl:mx-24 gap-5 items-center text-center justify-center flex-wrap flex-row w-full my-6">
-                
                 <div className="flex w-full flex-col px-32">
-      <Tabs 
-        aria-label="Options"         
-        selectedKey={selected}
-        color="primary" variant="bordered"
-        // onSelectionChange={(key: Key) => {setSelected(key)}} // Adjust this line
-        >
-        <Tab key="photos" title={
-            <div className="flex items-center space-x-2">
-              <span>Photos</span>
-            </div>
-          }>
-          <Card>
-            <CardBody>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </CardBody>
-          </Card>  
-        </Tab>
-        <Tab key="music" title="Music">
-          <Card>
-            <CardBody>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            </CardBody>
-          </Card>  
-        </Tab>
-        <Tab key="videos" title="Videos">
-          <Card>
-            <CardBody>
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </CardBody>
-          </Card>  
-        </Tab>
-      </Tabs>
-    </div>  
+                  <Tabs
+                    aria-label="Options"
+                    selectedKey={selected}
+                    color="primary"
+                    variant="bordered"
+                    // onSelectionChange={(key: Key) => {setSelected(key)}} // Adjust this line
+                  >
+                    <Tab
+                      key="photos"
+                      title={
+                        <div className="flex items-center space-x-2">
+                          <span>Photos</span>
+                        </div>
+                      }
+                    >
+                      <Card>
+                      
+                        <CardBody>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua. Ut enim ad minim veniam, quis
+                          nostrud exercitation ullamco laboris nisi ut aliquip
+                          ex ea commodo consequat.
+                        </CardBody>
+                      </Card>
+                    </Tab>
+                    <Tab key="music" title="Music">
+                      <Card>
+                        <CardBody>
+                          Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris nisi ut aliquip ex ea commodo
+                          consequat. Duis aute irure dolor in reprehenderit in
+                          voluptate velit esse cillum dolore eu fugiat nulla
+                          pariatur.
+                        </CardBody>
+                      </Card>
+                    </Tab>
+                    <Tab key="videos" title="Videos">
+                      <Card>
+                        <CardBody>
+                          Excepteur sint occaecat cupidatat non proident, sunt
+                          in culpa qui officia deserunt mollit anim id est
+                          laborum.
+                        </CardBody>
+                      </Card>
+                    </Tab>
+                  </Tabs>
+                </div>
               </div>
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
+
               <h1 className="text-6xl font-bold my-4 mt-16 text-center">
                 Alight Motion Specifications
               </h1>
