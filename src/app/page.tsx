@@ -181,407 +181,7 @@ export default function Blogs() {
                   </div>
                 </Link>
               </div>
-
-              <h1 className="text-6xl font-bold my-4 mt-16 text-center">
-                Alight Motion Features
-              </h1>
-
-              <div className="flex xl:mx-24 gap-5 items-center justify-center flex-wrap flex-row w-full my-6">
-                <Feature
-                  title="Keyframe Animation"
-                  description="Animate any property to bring every aspect of your creation to life."
-                  image="keyframe_animation.gif"
-                />
-                <Feature
-                  title="Camera Control"
-                  description="Animate cameras to build dynamic scenes."
-                  image="camera_control.gif"
-                />
-                <Feature
-                  title="Video, Image, Text, and Graphics"
-                  description="Combine multitude of layers in a variety of media types."
-                  image="video_image.gif"
-                />
-                <Feature
-                  title="Hierarchical Parenting"
-                  description="Link layers to easily create sophisticated motion."
-                  image="hierarchical_parenting.gif"
-                />
-                <Feature
-                  title="Advanced Easing"
-                  description="No need for fancy math: Alight Motion does the work for you."
-                  image="advanced_easing.gif"
-                />
-                <Feature
-                  title="150+ Visual Effects"
-                  description="Versatile effects you can mix and match in infinite combinations."
-                  image="150_effects.gif"
-                />
-                <Feature
-                  title="Powerful Compositing"
-                  description="Masking groups, blending modes, video transparency1, chroma and luma key. 1Apple platforms only"
-                  image="composition.gif"
-                />
-                <Feature
-                  title="Versatile Sharing"
-                  description="Share video, GIF, image sequences, project packages, and reusable elements."
-                  image="export.gif"
-                />
-                <Feature
-                  title="Vector Illustration"
-                  description="Illustrate and edit complex vector graphics right in the app."
-                  image="vector_illustration.gif"
-                />
-              </div>
-
-              <div className="flex xl:mx-24 gap-5 items-center justify-center flex-wrap flex-row w-full my-6">
-                {/* <Tabs
-                    aria-label="Options"
-                    selectedKey={selected}
-                    color="primary"
-                    variant="bordered"
-                    className="flex-wrap flex"
-                    onSelectionChange={(key: any) => {
-                      setSelected(key);
-                    }} // Adjust this line
-                  >
-                    <Tab
-                      key="photoframes"
-                      title={
-                        <div className="flex flex-col flex-wrap items-center space-x-2">
-                          <span>Several Photo Frames</span>
-                        </div>
-                      }
-                    >
-                      <Card>
-                        <CardBody>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip
-                          ex ea commodo consequat.
-                        </CardBody>
-                      </Card>
-                    </Tab>
-                    
-                    <Tab
-                      key="editing-materials"
-                      title={
-                        <div className="flex items-center space-x-2">
-                          <span>Import your own editing materials</span>
-                        </div>
-                      }
-                    >
-                      <Card>
-                        <CardBody>
-                          Ut enim ad minim veniam, quis nostrud exercitation
-                          ullamco laboris nisi ut aliquip ex ea commodo
-                          consequat. Duis aute irure dolor in reprehenderit in
-                          voluptate velit esse cillum dolore eu fugiat nulla
-                          pariatur.
-                        </CardBody>
-                      </Card>
-                    </Tab>
-                    
-                    <Tab
-                      key="library"
-                      title={
-                        <div className="flex items-center space-x-2">
-                          <span>Download from the library</span>
-                        </div>
-                      }
-                    >
-                      <Card>
-                        <CardBody>
-                          Excepteur sint occaecat cupidatat non proident, sunt
-                          in culpa qui officia deserunt mollit anim id est
-                          laborum.
-                        </CardBody>
-                      </Card>
-                    </Tab>
-                    
-                    <Tab
-                      key="elements"
-                      title={
-                        <div className="flex items-center space-x-2">
-                          <span>Quickly save your favorite elements</span>
-                        </div>
-                      }
-                    >
-                      <Card>
-                        <CardBody>
-                          Excepteur sint occaecat cupidatat non proident, sunt
-                          in culpa qui officia deserunt mollit anim id est
-                          laborum.
-                        </CardBody>
-                      </Card>
-                    </Tab>
-                    
-                    <Tab
-                      key="aspect-ratio"
-                      title={
-                        <div className="flex items-center space-x-2">
-                          <span>Produce Video in Different Aspect Ratio.</span>
-                        </div>
-                      }
-                    >
-                      <Card>
-                        <CardBody>
-                          Excepteur sint occaecat cupidatat non proident, sunt
-                          in culpa qui officia deserunt mollit anim id est
-                          laborum.
-                        </CardBody>
-                      </Card>
-                    </Tab>
-                    
-                    <Tab
-                      key="blending"
-                      title={
-                        <div className="flex items-center space-x-2">
-                          <span>Blending Modes</span>
-                        </div>
-                      }
-                    >
-                      <Card>
-                        <CardBody>
-                          Excepteur sint occaecat cupidatat non proident, sunt
-                          in culpa qui officia deserunt mollit anim id est
-                          laborum.
-                        </CardBody>
-                      </Card>
-                    </Tab>
-                    
-                    <Tab
-                      key="fonts"
-                      title={
-                        <div className="flex items-center space-x-2">
-                          <span>2000+ Built-in Fonts</span>
-                        </div>
-                      }
-                    >
-                      <Card>
-                        <CardBody>
-                          Excepteur sint occaecat cupidatat non proident, sunt
-                          in culpa qui officia deserunt mollit anim id est
-                          laborum.
-                        </CardBody>
-                      </Card>
-                    </Tab>
-                    <Tab
-                      key="color"
-                      title={
-                        <div className="flex items-center space-x-2">
-                          <span>Significant Color</span>
-                        </div>
-                      }
-                    >
-                      <Card>
-                        <CardBody>
-                          Excepteur sint occaecat cupidatat non proident, sunt
-                          in culpa qui officia deserunt mollit anim id est
-                          laborum.
-                        </CardBody>
-                      </Card>
-                    </Tab>
-                  </Tabs> */}
-
-                {/* <ResizablePanelGroup
-                  direction="vertical"
-                  className="min-h-[200px] max-w-xs rounded-lg border"
-                >
-                  <ResizablePanel defaultSize={25}>
-                    <div className="flex h-full items-center justify-center">
-                      <span className="font-semibold">
-                        Several Photo Frames
-                      </span>
-                    </div>
-                  </ResizablePanel>
-                  <ResizableHandle className="bg-white" />
-                  <ResizablePanel defaultSize={75} className="p-7">
-                    <div className="flex h-full items-center justify-center">
-                      <span className="font-semibold">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Neque commodi ut placeat ea blanditiis expedita quis
-                        nesciunt voluptas.
-                      </span>
-                    </div>
-                  </ResizablePanel>
-                </ResizablePanelGroup>
-                
-                <ResizablePanelGroup
-                  direction="vertical"
-                  className="min-h-[200px] max-w-xs rounded-lg border"
-                >
-                  <ResizablePanel defaultSize={25}>
-                    <div className="flex h-full items-center justify-center">
-                      <span className="font-semibold">
-                        Import your own editing materials
-                      </span>
-                    </div>
-                  </ResizablePanel>
-                  <ResizableHandle className="bg-white" />
-                  <ResizablePanel defaultSize={75} className="p-7">
-                    <div className="flex h-full items-center justify-center">
-                      <span className="font-semibold">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Nihil ratione provident eum illum, harum non
-                        necessitatibus ipsum. At officiis, delectus itaque.
-                      </span>
-                    </div>
-                  </ResizablePanel>
-                </ResizablePanelGroup>
-
-                <ResizablePanelGroup
-                  direction="vertical"
-                  className="min-h-[200px] max-w-xs rounded-lg border"
-                >
-                  <ResizablePanel defaultSize={25}>
-                    <div className="flex h-full items-center justify-center">
-                      <span className="font-semibold">
-                        Download from the library
-                      </span>
-                    </div>
-                  </ResizablePanel>
-                  <ResizableHandle className="bg-white" />
-                  <ResizablePanel defaultSize={75} className="p-7">
-                    <div className="flex h-full items-center justify-center">
-                      <span className="font-semibold">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Excepturi facilis, nostrum dolores quisquam perferendis
-                        laboriosam, molestias consequuntur eaque consequatur
-                        reiciendis neque?
-                      </span>
-                    </div>
-                  </ResizablePanel>
-                </ResizablePanelGroup>
-
-                <ResizablePanelGroup
-                  direction="vertical"
-                  className="min-h-[200px] max-w-xs rounded-lg border"
-                >
-                  <ResizablePanel defaultSize={25}>
-                    <div className="flex h-full items-center justify-center">
-                      <span className="font-semibold">
-                        Quickly save your favorite elements
-                      </span>
-                    </div>
-                  </ResizablePanel>
-                  <ResizableHandle className="bg-white" />
-                  <ResizablePanel defaultSize={75} className="p-7">
-                    <div className="flex h-full items-center justify-center">
-                      <span className="font-semibold">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Excepturi facilis, nostrum dolores quisquam perferendis
-                        laboriosam, molestias consequuntur eaque consequatur
-                        reiciendis neque?
-                      </span>
-                    </div>
-                  </ResizablePanel>
-                </ResizablePanelGroup>
-
-                <ResizablePanelGroup
-                  direction="vertical"
-                  className="min-h-[200px] max-w-xs rounded-lg border"
-                >
-                  <ResizablePanel defaultSize={25}>
-                    <div className="flex h-full items-center justify-center">
-                      <span className="font-semibold">
-                        Produce Video in Different Aspect Ratio.
-                      </span>
-                    </div>
-                  </ResizablePanel>
-                  <ResizableHandle className="bg-white" />
-                  <ResizablePanel defaultSize={75} className="p-7">
-                    <div className="flex h-full items-center justify-center">
-                      <span className="font-semibold">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Molestiae corrupti officiis voluptatibus voluptatem
-                        maxime dignissimos, possimus sit distinctio eveniet
-                        optio, omnis aperiam sapiente eos!
-                      </span>
-                    </div>
-                  </ResizablePanel>
-                </ResizablePanelGroup>
-
-                <ResizablePanelGroup
-                  direction="vertical"
-                  className="min-h-[200px] max-w-xs rounded-lg border"
-                >
-                  <ResizablePanel defaultSize={25}>
-                    <div className="flex h-full items-center justify-center">
-                      <span className="font-semibold">Blending Modes</span>
-                    </div>
-                  </ResizablePanel>
-                  <ResizableHandle className="bg-white" />
-                  <ResizablePanel defaultSize={75} className="p-7">
-                    <div className="flex h-full items-center justify-center">
-                      <span className="font-semibold">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Molestiae corrupti officiis voluptatibus voluptatem
-                        maxime dignissimos, possimus sit distinctio eveniet
-                        optio, omnis aperiam sapiente eos!
-                      </span>
-                    </div>
-                  </ResizablePanel>
-                </ResizablePanelGroup>
-
-                <ResizablePanelGroup
-                  direction="vertical"
-                  className="min-h-[200px] max-w-xs rounded-lg border"
-                >
-                  <ResizablePanel defaultSize={25}>
-                    <div className="flex h-full items-center justify-center">
-                      <span className="font-semibold">
-                        2000+ Built-in Fonts
-                      </span>
-                    </div>
-                  </ResizablePanel>
-                  <ResizableHandle className="bg-white" />
-                  <ResizablePanel defaultSize={75} className="p-7">
-                    <div className="flex h-full items-center justify-center">
-                      <span className="font-semibold">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Molestiae corrupti officiis voluptatibus voluptatem
-                        maxime dignissimos, possimus sit distinctio eveniet
-                        optio, omnis aperiam sapiente eos!
-                      </span>
-                    </div>
-                  </ResizablePanel>
-                </ResizablePanelGroup>
-
-                <ResizablePanelGroup
-                  direction="vertical"
-                  className="min-h-[200px] max-w-xs rounded-lg border"
-                >
-                  <ResizablePanel defaultSize={25}>
-                    <div className="flex h-full items-center justify-center">
-                      <span className="font-semibold">Significant Color</span>
-                    </div>
-                  </ResizablePanel>
-                  <ResizableHandle className="bg-white" />
-                  <ResizablePanel defaultSize={75} className="p-7">
-                    <div className="flex h-full items-center justify-center">
-                      <span className="font-semibold">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Molestiae corrupti officiis voluptatibus voluptatem
-                        maxime dignissimos, possimus sit distinctio eveniet
-                        optio, omnis aperiam sapiente eos!
-                      </span>
-                    </div>
-                  </ResizablePanel>
-                </ResizablePanelGroup> */}
-                
-                
-                <MyFeature title="Several Photo Frames" />
-                <MyFeature title="Import your own editing materials" />
-                <MyFeature title="Download from the library" />
-                <MyFeature title="Quickly save your favorite elements" />
-                <MyFeature title="Produce Video in Different Aspect Ratio." />
-                <MyFeature title="Blending Modes" />
-                <MyFeature title="2000+ Built-in Fonts" />
-                <MyFeature title="Significant Color" />
-              </div>
-
+              
               <h1 className="text-5xl font-bold my-4 mt-16 text-center">
                 Alight Motion Specifications
               </h1>
@@ -728,6 +328,71 @@ export default function Blogs() {
                   </div>
                 </Alert>
               </div>
+
+              <h1 className="text-6xl font-bold my-4 mt-16 text-center">
+                Alight Motion Features
+              </h1>
+
+              <div className="flex xl:mx-24 gap-5 items-center justify-center flex-wrap flex-row w-full my-6">
+                <Feature
+                  title="Keyframe Animation"
+                  description="Animate any property to bring every aspect of your creation to life."
+                  image="keyframe_animation.gif"
+                />
+                <Feature
+                  title="Camera Control"
+                  description="Animate cameras to build dynamic scenes."
+                  image="camera_control.gif"
+                />
+                <Feature
+                  title="Video, Image, Text, and Graphics"
+                  description="Combine multitude of layers in a variety of media types."
+                  image="video_image.gif"
+                />
+                <Feature
+                  title="Hierarchical Parenting"
+                  description="Link layers to easily create sophisticated motion."
+                  image="hierarchical_parenting.gif"
+                />
+                <Feature
+                  title="Advanced Easing"
+                  description="No need for fancy math: Alight Motion does the work for you."
+                  image="advanced_easing.gif"
+                />
+                <Feature
+                  title="150+ Visual Effects"
+                  description="Versatile effects you can mix and match in infinite combinations."
+                  image="150_effects.gif"
+                />
+                <Feature
+                  title="Powerful Compositing"
+                  description="Masking groups, blending modes, video transparency1, chroma and luma key. 1Apple platforms only"
+                  image="composition.gif"
+                />
+                <Feature
+                  title="Versatile Sharing"
+                  description="Share video, GIF, image sequences, project packages, and reusable elements."
+                  image="export.gif"
+                />
+                <Feature
+                  title="Vector Illustration"
+                  description="Illustrate and edit complex vector graphics right in the app."
+                  image="vector_illustration.gif"
+                />
+              </div>
+
+              <div className="flex xl:mx-24 gap-5 items-center justify-center flex-wrap flex-row w-full my-6">
+                <MyFeature title="Several Photo Frames" />
+                <MyFeature title="Import your own editing materials" />
+                <MyFeature title="Download from the library" />
+                <MyFeature title="Quickly save your favorite elements" />
+                <MyFeature title="Produce Video in Different Aspect Ratio." />
+                <MyFeature title="Blending Modes" />
+                <MyFeature title="2000+ Built-in Fonts" />
+                <MyFeature title="Significant Color" />
+              </div>
+
+              
 
               <div className="flex flex-col text-center px-8 pb-14">
                 <FAQ />
