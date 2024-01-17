@@ -233,6 +233,7 @@ export default function Blogs() {
                     selectedKey={selected}
                     color="primary"
                     variant="bordered"
+                    className="flex-wrap flex"
                     onSelectionChange={(key: any) => {
                       setSelected(key);
                     }} // Adjust this line
@@ -257,10 +258,10 @@ export default function Blogs() {
                     </Tab>
 
                     <Tab
-                      key="music"
+                      key="editing-materials"
                       title={
                         <div className="flex items-center space-x-2">
-                          <span>Import your own editing materials </span>
+                          <span>Import your own editing materials</span>
                         </div>
                       }
                     >
@@ -274,8 +275,9 @@ export default function Blogs() {
                         </CardBody>
                       </Card>
                     </Tab>
+                    
                     <Tab
-                      key="videos"
+                      key="library"
                       title={
                         <div className="flex items-center space-x-2">
                           <span>Download from the library</span>
@@ -290,8 +292,9 @@ export default function Blogs() {
                         </CardBody>
                       </Card>
                     </Tab>
+                    
                     <Tab
-                      key="videos"
+                      key="elements"
                       title={
                         <div className="flex items-center space-x-2">
                           <span>Quickly save your favorite elements</span>
@@ -306,8 +309,9 @@ export default function Blogs() {
                         </CardBody>
                       </Card>
                     </Tab>
+                    
                     <Tab
-                      key="videos"
+                      key="aspect-ratio"
                       title={
                         <div className="flex items-center space-x-2">
                           <span>Produce Video in Different Aspect Ratio.</span>
@@ -322,8 +326,9 @@ export default function Blogs() {
                         </CardBody>
                       </Card>
                     </Tab>
+                    
                     <Tab
-                      key="videos"
+                      key="blending"
                       title={
                         <div className="flex items-center space-x-2">
                           <span>Blending Modes</span>
@@ -338,8 +343,9 @@ export default function Blogs() {
                         </CardBody>
                       </Card>
                     </Tab>
+                    
                     <Tab
-                      key="videos"
+                      key="fonts"
                       title={
                         <div className="flex items-center space-x-2">
                           <span>2000+ Built-in Fonts</span>
@@ -354,8 +360,9 @@ export default function Blogs() {
                         </CardBody>
                       </Card>
                     </Tab>
+                    
                     <Tab
-                      key="videos"
+                      key="color"
                       title={
                         <div className="flex items-center space-x-2">
                           <span>Significant Color</span>
