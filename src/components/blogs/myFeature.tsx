@@ -8,8 +8,8 @@ const MyFeature = ({ title, description, icon }: { title: string, description?: 
         {icon || <Check />}
       </div>
       <div className="flex flex-col bg-black border border-zinc-500 max-w-xs min-h-[270px] rounded-xl p-5 gap-3 pt-12">
-        <h1 className="text-xl font-bold text-primary">{title}</h1>
-        <p className="text-white/50 text-base">
+        <h1 className="text-2xl font-bold text-white">{title}</h1>
+        <p className="text-md text-white/70">
           {description || "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa nulla, reprehenderit quisquam voluptates id corporis quidem corrupti asperiores sequi. Earum."}
         </p>
       </div>
