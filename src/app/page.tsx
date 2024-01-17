@@ -1,29 +1,20 @@
 "use client";
 
-import React from "react";
+import Feature from "@/src/components/blogs/features";
 import { Alert, AlertDescription, AlertTitle } from "@/src/components/ui/alert";
-import { Blog } from "@/src/utils/types";
+import { Card, CardBody } from "@nextui-org/card";
+import { Tab, Tabs } from "@nextui-org/tabs";
+import { Tooltip } from "@nextui-org/tooltip";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import { IoStarSharp } from "react-icons/io5";
-import Feature from "@/src/components/blogs/features";
-import { Button } from "@nextui-org/button";
-import { Tab, Tabs } from "@nextui-org/tabs";
-import { Card, CardBody, CardHeader } from "@nextui-org/card";
+import React, { useEffect, useState } from "react";
 import { FaInstagram } from "react-icons/fa";
-import { RiTwitterXFill } from "react-icons/ri";
+import { IoStarSharp } from "react-icons/io5";
 import { MdOutlineFacebook } from "react-icons/md";
+import { RiTwitterXFill } from "react-icons/ri";
 import { SlSocialYoutube } from "react-icons/sl";
-import { Tooltip } from "@nextui-org/tooltip";
 // import { Accordion, AccordionItem } from "@nextui-org/accordion";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/src/components/ui/accordion";
 
 import FAQ from "../components/blogs/Faq";
 
@@ -539,9 +530,10 @@ export default function Blogs() {
                 </Alert>
               </div>
 
-              <FAQ />
 
               <div className="flex flex-col text-center p-8">
+              <FAQ />
+              
                 <div className="h-fit flex gap-14 py-8 justify-center">
                   <Tooltip showArrow={true} content="Instagram">
                     <Link
