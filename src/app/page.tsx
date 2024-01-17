@@ -57,7 +57,7 @@ export default function Blogs() {
       clearInterval(interval);
     };
   }, []);
-  
+
   return (
     <>
       <div>
@@ -105,17 +105,20 @@ export default function Blogs() {
                 </h1>
 
                 <p className="sm:text-[1.2rem] text-[1rem] sm:leading-[30px] leading-[25px] text-[#a6a6a6] text-center sm:mx-14 mx-2">
-                  Create stunning motion designs, videos, and animations with the
-              world&apos;s first professional motion graphics toolset for mobile
-              platforms. From keyframe animation to video compositing to
-              visual effects, do it all from your iPhone, iPad, Mac (with
-                Apple Silicon), or Android device.
+                  Create stunning motion designs, videos, and animations with
+                  the world&apos;s first professional motion graphics toolset
+                  for mobile platforms. From keyframe animation to video
+                  compositing to visual effects, do it all from your iPhone,
+                  iPad, Mac (with Apple Silicon), or Android device.
                 </p>
-                <WhyUseit />
 
+                <WhyUseit />
+              </div>
+              <div className="flex flex-col gap-8 lg:flex-row flex-wrap w-full items-center justify-center lg:justify-between">
+                <div className="ml-52" />
                 <Link
                   href="/"
-                  className="bg-black border mt-7 px-4 p-3 gap-3 border-white rounded-xl flex flex-row items-center"
+                  className="bg-black h-fit border mt-7 px-4 p-3 gap-3 border-white rounded-xl flex flex-row items-center"
                 >
                   <img
                     src="/alightmotionlogo.webp"
@@ -131,9 +134,8 @@ export default function Blogs() {
                     <p className="text-lg">From Here</p>
                   </div>
                 </Link>
+                <OnthisPage />
               </div>
-              
-              <OnthisPage />
 
               <AlightMotionSpecifications />
 
@@ -192,12 +194,12 @@ export default function Blogs() {
                   </Tooltip>
                 </div>
                 <p className="text-white/40 text-xs">
-                Copyright © Splice Video Editor S.r.l. | Corso Como 15, 20154
-  Milan, Italy | VAT, tax code, and number of registration with
-  the Milan Monza Brianza Lodi Company Register 11505810967 |
-  REA number MI 2608304 | Contributed capital €10.000,00 | Sole
-  shareholder company subject to the management and coordination
-  of Bending Spoons S.p.A.{" "}
+                  Copyright © Splice Video Editor S.r.l. | Corso Como 15, 20154
+                  Milan, Italy | VAT, tax code, and number of registration with
+                  the Milan Monza Brianza Lodi Company Register 11505810967 |
+                  REA number MI 2608304 | Contributed capital €10.000,00 | Sole
+                  shareholder company subject to the management and coordination
+                  of Bending Spoons S.p.A.{" "}
                 </p>
               </div>
             </div>
