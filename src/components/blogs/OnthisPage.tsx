@@ -20,7 +20,6 @@ const OnthisPage = () => {
           Alight Motion MOD APK 2024 with Pro Features, No Watermark, and
           Ad-Free Experience!
         </button>
-
         <button onClick={(e) => handleSmoothScroll(e, "specifications")}>
           Alight Motion Specifications
         </button>
