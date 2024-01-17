@@ -1,27 +1,19 @@
 "use client";
 
-import Feature from "@/src/components/blogs/features";
-import { Alert, AlertDescription, AlertTitle } from "@/src/components/ui/alert";
-import { Card, CardBody } from "@nextui-org/card";
-import { Tab, Tabs } from "@nextui-org/tabs";
 import { Tooltip } from "@nextui-org/tooltip";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { FaInstagram } from "react-icons/fa";
-import { IoStarSharp } from "react-icons/io5";
 import { MdOutlineFacebook } from "react-icons/md";
 import { RiTwitterXFill } from "react-icons/ri";
 import { SlSocialYoutube } from "react-icons/sl";
-import {
-  ResizableHandle,
-  ResizablePanel,
-  ResizablePanelGroup,
-} from "@/src/components/ui/resizable";
-
+import AlightMotionSpecifications from "../components/blogs/AlightMotionSpecifications";
+import AlreadyFeatures from "../components/blogs/AlreadyFeatures";
 import FAQ from "../components/blogs/Faq";
-import MyFeature from "../components/blogs/myFeature";
+import WhyUseit from "../components/blogs/WhyUseit";
+import { Button } from "@nextui-org/button";
 
 async function extractAllBlogs() {
   try {
@@ -64,6 +56,18 @@ export default function Blogs() {
       clearInterval(interval);
     };
   }, []);
+
+  function handleSmoothScroll(e: any, element: string) {
+    e.preventDefault();
+
+    const targetElement = document.getElementById(element);
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  }
 
   // const blogPostsList = await extractAllBlogs();
 
@@ -113,11 +117,10 @@ export default function Blogs() {
                 className="justify-center items-center flex flex-col gap-4 
             lg:mx-44 md:mx-16 sm:mx-4"
               >
-                {/* <Link href="#faqs" className="transition-all">
-  Go to FAQ's
-</Link> */}
-
-                <h1 className="sm:text-5xl text-4xl font-bold text-center">
+                <h1
+                  id="title"
+                  className="sm:text-5xl text-4xl font-bold text-center"
+                >
                   Alight Motion MOD APK 2024 with Pro Features, No Watermark,
                   and Ad-Free Experience!
                 </h1>
@@ -129,38 +132,7 @@ export default function Blogs() {
               visual effects, do it all from your iPhone, iPad, Mac (with
                 Apple Silicon), or Android device.`.replace("'", "&apos;")}
                 </p>
-                <div className="text-lg flex xl:mx-24 gap-5 items-center text-center justify-center flex-wrap flex-row w-full my-6">
-                  <Alert className="border-none bg-alightdarkbg w-52 h-20 items-left py-8 flex flex-col justify-center">
-                    <AlertTitle className="text-primary">
-                      High-quality Video in a Timely Manner
-                    </AlertTitle>
-                  </Alert>
-                  <Alert className="border-none bg-alightdarkbg w-52 h-20 items-left py-8 flex flex-col justify-center">
-                    <AlertTitle className="text-primary">
-                      Save HD Quality Content
-                    </AlertTitle>
-                  </Alert>
-                  <Alert className="border-none bg-alightdarkbg w-52 h-20 items-left py-8 flex flex-col justify-center">
-                    <AlertTitle className="text-primary">
-                      Simple To Operate
-                    </AlertTitle>
-                  </Alert>
-                  <Alert className="border-none bg-alightdarkbg w-52 h-20 items-left py-8 flex flex-col justify-center">
-                    <AlertTitle className="text-primary">
-                      Best For Professional Usage
-                    </AlertTitle>
-                  </Alert>
-                  <Alert className="border-none bg-alightdarkbg w-52 h-20 items-left py-8 flex flex-col justify-center">
-                    <AlertTitle className="text-primary">
-                      Excellent Performance
-                    </AlertTitle>
-                  </Alert>
-                  <Alert className="border-none bg-alightdarkbg w-52 h-20 items-left py-8 flex flex-col justify-center">
-                    <AlertTitle className="text-primary">
-                      Suitable User Interface
-                    </AlertTitle>
-                  </Alert>
-                </div>
+                <WhyUseit />
 
                 <Link
                   href="/"
@@ -181,220 +153,47 @@ export default function Blogs() {
                   </div>
                 </Link>
               </div>
-              
-              <h1 className="text-5xl font-bold my-4 mt-16 text-center">
-                Alight Motion Specifications
-              </h1>
-              <div className="flex xl:mx-24 gap-5 items-center justify-center flex-wrap flex-row w-full my-6">
-                <Alert className="w-fit h-24 hover:bg-primary/30 transition-all flex gap-3 flex-row items-left justify-center">
-                  <div className="flex-col w-fit h-full flex items-center justify-center">
-                    <IoStarSharp className="h-4 w-4" />
-                  </div>
-                  <div className="flex flex-col h-full justify-center">
-                    <AlertTitle className="text-primary">
-                      Latest Version
-                    </AlertTitle>
-                    <AlertDescription>v5.0.200.1000653</AlertDescription>
-                  </div>
-                </Alert>
+              <div>
+                <h2>On This Page</h2>
+                <div className="flex flex-col items-start justify-center">
+                  <button
+                    onClick={(e) =>
+                      handleSmoothScroll(
+                        e,
+                        "title"
+                      )
+                    }
+                  >
+                    Alight Motion MOD APK 2024 with Pro Features, No Watermark,
+                    and Ad-Free Experience!
+                  </button>
+                  
+                  <button
+                    onClick={(e) => handleSmoothScroll(e, "specifications")}
+                  >
+                    Alight Motion Specifications
+                  </button>
+                  
+                  <button
+                    onClick={(e) => handleSmoothScroll(e, "features")}
+                  >
+Alight Motion Features
+                  </button>
+                  
 
-                <Alert className="w-fit h-24 hover:bg-primary/30 transition-all flex gap-3 flex-row items-left justify-center">
-                  <div className="flex-col w-fit h-full flex items-center justify-center">
-                    <IoStarSharp className="h-4 w-4" />
-                  </div>
-                  <div className="flex flex-col h-full justify-center">
-                    <AlertTitle className="text-primary">Size</AlertTitle>
-                    <AlertDescription>81.58 MB</AlertDescription>
-                  </div>
-                </Alert>
-
-                <Alert className="w-fit h-24 hover:bg-primary/30 transition-all flex gap-3 flex-row items-left justify-center">
-                  <div className="flex-col w-fit h-full flex items-center justify-center">
-                    <IoStarSharp className="h-4 w-4" />
-                  </div>
-                  <div className="flex flex-col h-full justify-center">
-                    <AlertTitle className="text-primary">
-                      Released On
-                    </AlertTitle>
-                    <AlertDescription>Aug 5, 2018</AlertDescription>
-                  </div>
-                </Alert>
-
-                <Alert className="w-fit h-24 hover:bg-primary/30 transition-all flex gap-3 flex-row items-left justify-center">
-                  <div className="flex-col w-fit h-full flex items-center justify-center">
-                    <IoStarSharp className="h-4 w-4" />
-                  </div>
-                  <div className="flex flex-col h-full justify-center">
-                    <AlertTitle className="text-primary">
-                      Last Updated On
-                    </AlertTitle>
-                    <AlertDescription>December 15, 2023</AlertDescription>
-                  </div>
-                </Alert>
-                <Alert className="w-fit h-24 hover:bg-primary/30 transition-all flex gap-3 flex-row items-left justify-center">
-                  <div className="flex-col w-fit h-full flex items-center justify-center">
-                    <IoStarSharp className="h-4 w-4" />
-                  </div>
-                  <div className="flex flex-col h-full justify-center">
-                    <AlertTitle className="text-primary">
-                      Supported For
-                    </AlertTitle>
-                    <AlertDescription>Only Android 6.0 and up</AlertDescription>
-                  </div>
-                </Alert>
-
-                <Alert className="w-fit h-24 hover:bg-primary/30 transition-all flex gap-3 flex-row items-left justify-center">
-                  <div className="flex-col w-fit h-full flex items-center justify-center">
-                    <IoStarSharp className="h-4 w-4" />
-                  </div>
-
-                  <div className="flex flex-col h-full justify-center">
-                    <AlertTitle className="text-primary">File Type</AlertTitle>
-                    <AlertDescription>APK</AlertDescription>
-                  </div>
-                </Alert>
-
-                <Alert className="w-fit h-24 hover:bg-primary/30 transition-all flex gap-3 flex-row items-left justify-center">
-                  <div className="flex-col w-fit h-full flex items-center justify-center">
-                    <IoStarSharp className="h-4 w-4" />
-                  </div>
-
-                  <div className="flex flex-col h-full justify-center">
-                    <AlertTitle className="text-primary">Price</AlertTitle>
-                    <AlertDescription>100% Free</AlertDescription>
-                  </div>
-                </Alert>
-                <Alert className="w-fit h-24 items-left hover:bg-primary/30 transition-all flex gap-3 flex-row justify-center">
-                  <div className="flex-col w-fit h-full flex items-center justify-center">
-                    <IoStarSharp className="h-4 w-4" />
-                  </div>
-
-                  <div className="flex flex-col h-full justify-center">
-                    <AlertTitle className="text-primary">Category</AlertTitle>
-                    <AlertDescription>Video Editing</AlertDescription>
-                  </div>
-                </Alert>
-
-                <Alert className=" w-48 h-24 items-left hover:bg-primary/30 transition-all flex gap-3 flex-row justify-center">
-                  <div className="flex-col w-fit h-full flex items-center justify-center">
-                    <IoStarSharp className="h-4 w-4" />
-                  </div>
-                  <div className="flex flex-col h-full justify-center">
-                    <AlertTitle className="text-primary">MOD Info</AlertTitle>
-                    <AlertDescription>
-                      Single Package APK (No SAI Needed)
-                    </AlertDescription>
-                  </div>
-                </Alert>
-                <Alert className="w-52 h-24 items-left hover:bg-primary/30 transition-all flex gap-3 flex-row justify-center">
-                  <div className="flex-col w-fit h-full flex items-center justify-center">
-                    <IoStarSharp className="h-4 w-4" />
-                  </div>
-
-                  <div className="flex flex-col h-full justify-center">
-                    <AlertTitle className="text-primary">
-                      Developer/Publisher:
-                    </AlertTitle>
-                    <AlertDescription>
-                      Alight Motion/Alight Creative Inc
-                    </AlertDescription>
-                  </div>
-                </Alert>
-                <Alert className="w-fit h-24 items-left hover:bg-primary/30 transition-all flex gap-3 flex-row justify-center">
-                  <div className="flex-col w-fit h-full flex items-center justify-center">
-                    <IoStarSharp className="h-4 w-4" />
-                  </div>
-
-                  <div className="flex flex-col h-full justify-center">
-                    <AlertTitle className="text-primary">
-                      Subscription
-                    </AlertTitle>
-                    <AlertDescription>
-                      Premium/Paid Subscription Unlocked
-                    </AlertDescription>
-                  </div>
-                </Alert>
-                <Alert className="w-fit h-24 items-left hover:bg-primary/30 transition-all flex gap-3 flex-row justify-center">
-                  <div className="flex-col w-fit h-full flex items-center justify-center">
-                    <IoStarSharp className="h-4 w-4" />
-                  </div>
-                  <div className="flex flex-col h-full justify-center">
-                    <AlertTitle className="text-primary">
-                      Google Play ID/Package Name
-                    </AlertTitle>
-                    <AlertDescription>
-                      com.alightcreative.motion
-                    </AlertDescription>
-                  </div>
-                </Alert>
+                  <button
+                    onClick={(e) => handleSmoothScroll(e, "faqs")}
+                  >
+                    Go to FAQ's
+                  </button>
+                </div>
               </div>
 
-              <h1 className="text-6xl font-bold my-4 mt-16 text-center">
-                Alight Motion Features
-              </h1>
+              <AlightMotionSpecifications />
 
-              <div className="flex xl:mx-24 gap-5 items-center justify-center flex-wrap flex-row w-full my-6">
-                <Feature
-                  title="Keyframe Animation"
-                  description="Animate any property to bring every aspect of your creation to life."
-                  image="keyframe_animation.gif"
-                />
-                <Feature
-                  title="Camera Control"
-                  description="Animate cameras to build dynamic scenes."
-                  image="camera_control.gif"
-                />
-                <Feature
-                  title="Video, Image, Text, and Graphics"
-                  description="Combine multitude of layers in a variety of media types."
-                  image="video_image.gif"
-                />
-                <Feature
-                  title="Hierarchical Parenting"
-                  description="Link layers to easily create sophisticated motion."
-                  image="hierarchical_parenting.gif"
-                />
-                <Feature
-                  title="Advanced Easing"
-                  description="No need for fancy math: Alight Motion does the work for you."
-                  image="advanced_easing.gif"
-                />
-                <Feature
-                  title="150+ Visual Effects"
-                  description="Versatile effects you can mix and match in infinite combinations."
-                  image="150_effects.gif"
-                />
-                <Feature
-                  title="Powerful Compositing"
-                  description="Masking groups, blending modes, video transparency1, chroma and luma key. 1Apple platforms only"
-                  image="composition.gif"
-                />
-                <Feature
-                  title="Versatile Sharing"
-                  description="Share video, GIF, image sequences, project packages, and reusable elements."
-                  image="export.gif"
-                />
-                <Feature
-                  title="Vector Illustration"
-                  description="Illustrate and edit complex vector graphics right in the app."
-                  image="vector_illustration.gif"
-                />
-              </div>
+              <AlreadyFeatures />
 
-              <div className="flex xl:mx-24 gap-5 items-center justify-center flex-wrap flex-row w-full my-6">
-                <MyFeature title="Several Photo Frames" />
-                <MyFeature title="Import your own editing materials" />
-                <MyFeature title="Download from the library" />
-                <MyFeature title="Quickly save your favorite elements" />
-                <MyFeature title="Produce Video in Different Aspect Ratio." />
-                <MyFeature title="Blending Modes" />
-                <MyFeature title="2000+ Built-in Fonts" />
-                <MyFeature title="Significant Color" />
-              </div>
-
-              
-
-              <div className="flex flex-col text-center px-8 pb-14">
+              <div className="flex flex-col text-center">
                 <FAQ />
 
                 <div className="h-fit flex gap-14 py-8 justify-center">
@@ -455,34 +254,6 @@ export default function Blogs() {
                   of Bending Spoons S.p.A.{" "}
                 </p>
               </div>
-
-              {/* <div>
-              <Specification
-                title="Latest Version"
-                description="v5.0.200.1000653"
-                icon={<GitGraph className="w-20 h-20 rounded-xl shadow-lg" />}
-              />
-              <Specification
-                title="Size"
-                description="81.58 MB"
-                icon={<GitGraph className="w-20 h-20 rounded-xl shadow-lg" />}
-              />
-              <Specification
-                title="Released On"
-                description="Aug 5, 2018"
-                icon={<GitGraph className="w-20 h-20 rounded-xl shadow-lg" />}
-              />
-              <Specification
-                title="Last Updated On"
-                description="December 15, 2023"
-                icon={<GitGraph className="w-20 h-20 rounded-xl shadow-lg" />}
-              />
-              <Specification
-                title="Last Updated On"
-                description="December 15, 2023"
-                icon={<GitGraph className="w-20 h-20 rounded-xl shadow-lg" />}
-              />
-            </div> */}
             </div>
           </div>
 

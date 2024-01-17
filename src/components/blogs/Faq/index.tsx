@@ -7,7 +7,7 @@ import {
 
 const FAQ = () => {
   return (
-    <div className="flex xl:mx-24 gap-5 items-center justify-center flex-wrap flex-col w-full my-6">
+    <div className="flex gap-5 items-center justify-center flex-wrap flex-col w-full my-6">
       <h1 id="faqs" className="text-6xl font-bold my-4 mt-16 text-center">
         FAQ&apos;s
       </h1>

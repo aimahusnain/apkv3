@@ -241,7 +241,6 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                       }
                     >
                       <Card>
-                      
                         <CardBody>
                           Lorem ipsum dolor sit amet, consectetur adipiscing
                           elit, sed do eiusmod tempor incididunt ut labore et
@@ -482,36 +481,6 @@ export default function BlogDetailsHome({ blogData }: { blogData: Blog }) {
                   </AccordionItem>
                 </Accordion>
               </div>
-
-              <div></div>
-
-              {/* <div>
-                <Specification
-                  title="Latest Version"
-                  description="v5.0.200.1000653"
-                  icon={<GitGraph className="w-20 h-20 rounded-xl shadow-lg" />}
-                />
-                <Specification
-                  title="Size"
-                  description="81.58 MB"
-                  icon={<GitGraph className="w-20 h-20 rounded-xl shadow-lg" />}
-                />
-                <Specification
-                  title="Released On"
-                  description="Aug 5, 2018"
-                  icon={<GitGraph className="w-20 h-20 rounded-xl shadow-lg" />}
-                />
-                <Specification
-                  title="Last Updated On"
-                  description="December 15, 2023"
-                  icon={<GitGraph className="w-20 h-20 rounded-xl shadow-lg" />}
-                />
-                <Specification
-                  title="Last Updated On"
-                  description="December 15, 2023"
-                  icon={<GitGraph className="w-20 h-20 rounded-xl shadow-lg" />}
-                />
-              </div> */}
             </div>
           </div>
 
