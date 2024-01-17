@@ -17,8 +17,7 @@ const OnthisPage = () => {
       <h2 className="text-xl font-bold">On This Page</h2>
       <div className="flex flex-col items-start justify-center gap-4">
         <button onClick={(e) => handleSmoothScroll(e, "title")} className="text-left">
-          Alight Motion MOD APK 2024 with Pro Features, No Watermark, and
-          Ad-Free Experience!
+          Alight Motion MOD APK 2024 with Pro Features, No Watermark, and Ad-Free Experience!
         </button>
         <button onClick={(e) => handleSmoothScroll(e, "specifications")} className="text-left">
           Alight Motion Specifications
