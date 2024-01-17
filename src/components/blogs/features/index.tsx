@@ -5,19 +5,22 @@ interface FeaturesProps {
   title: string;
   description: string;
   image: string;
+  idly?: string
 }
 
 const Features: React.FC<FeaturesProps> = ({
   title,
   description,
   image,
+  idly
 }: {
   title: string;
   description: string;
   image: string;
+  idly?: string
 }) => {
   return (
-    <div className="rounded-xl w-fit p-5 flex gap-2">
+    <div id={idly} className="rounded-xl w-fit p-5 flex gap-2">
       <Image
         width={80}
         height={50}

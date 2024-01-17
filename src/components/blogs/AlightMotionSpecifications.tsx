@@ -5,8 +5,9 @@ const AlightMotionSpecifications = () => {
   return (
     <div>
       <h1
-        id="specifications"
         className="text-5xl font-bold my-4 mt-16 text-center"
+        id="specifications"
+        style={{ scrollMarginTop: "70px" }}
       >
         Alight Motion Specifications
       </h1>

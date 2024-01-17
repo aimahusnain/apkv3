@@ -4,7 +4,7 @@ import { Alert, AlertTitle } from "@/src/components/ui/alert";
 const WhyUseit = () => {
   return (
     <div>
-       <div className="text-lg flex xl:mx-24 gap-5 items-center text-center justify-center flex-wrap flex-row w-full my-6">
+       <div className="text-lg flex gap-5 items-center text-center justify-center flex-wrap flex-row w-full my-6">
                   <Alert className="border-none bg-alightdarkbg w-52 h-20 items-left py-8 flex flex-col justify-center">
                     <AlertTitle className="text-primary">
                       High-quality Video in a Timely Manner

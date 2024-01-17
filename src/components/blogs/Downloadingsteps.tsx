@@ -12,7 +12,7 @@ const Downloadingsteps = () => {
           Alight Motion Pro downloaded.
         </p>
         <ul className="list-disc ml-5">
-          <li id="howtodownload">Simply hit the download icon in the bottom of the App info.</li>
+          <li>Simply hit the download icon in the bottom of the App info.</li>
           <li>Your downloading will start</li>
           <li>The process of downloading will eat up some of your time.</li>
           <li>After downloading, continue.</li>
@@ -22,7 +22,7 @@ const Downloadingsteps = () => {
             device.
           </li>
         </ul>
-        <p>
+        <p id="howtodownload">
           Now you can also download Worms Zone MOD APK, an amazing snake game
           with all the premium features unlocked.
         </p>

@@ -98,15 +98,16 @@ export default function Blogs() {
                 className="justify-center items-center flex flex-col gap-4 
             lg:mx-44 md:mx-16 sm:mx-4"
               >
-                <h1 className="sm:text-5xl text-4xl font-bold text-center">
+                <h1
+                  id="title"
+                  style={{ scrollMarginTop: "70px" }}
+                  className="sm:text-5xl text-4xl font-bold text-center"
+                >
                   Alight Motion MOD APK 2024 with Pro Features, No Watermark,
                   and Ad-Free Experience!
                 </h1>
 
-                <p
-                  id="title"
-                  className="sm:text-[1.2rem] text-[1rem] sm:leading-[30px] leading-[25px] text-[#a6a6a6] text-center sm:mx-14 mx-2"
-                >
+                <p className="sm:text-[1.2rem] text-[1rem] sm:leading-[30px] leading-[25px] text-[#a6a6a6] text-center sm:mx-14 mx-2">
                   Create stunning motion designs, videos, and animations with
                   the world&apos;s first professional motion graphics toolset
                   for mobile platforms. From keyframe animation to video
@@ -141,8 +142,9 @@ export default function Blogs() {
                 </Link>
                 <OnthisPage />
               </div>
-
-              <AlightMotionSpecifications />
+              <div className="w-full px-36">
+                <AlightMotionSpecifications />
+              </div>
 
               <AlreadyFeatures />
 
@@ -202,7 +204,7 @@ export default function Blogs() {
                     </Link>
                   </Tooltip>
                 </div>
-                <p id='conclusion' className="text-white/40 text-xs">
+                <p className="text-white/40 text-xs">
                   Copyright © Splice Video Editor S.r.l. | Corso Como 15, 20154
                   Milan, Italy | VAT, tax code, and number of registration with
                   the Milan Monza Brianza Lodi Company Register 11505810967 |
@@ -228,7 +230,6 @@ export default function Blogs() {
             className="hidden sm:block h-full w-full absolute top-[600px]"
           />
           <img
-          
             src="/vertical_stars.png"
             alt=""
             className="sm:hidden h-full w-full absolute top-[500px]"
