@@ -12,6 +12,7 @@
   "dependencies": {
     "@dotlottie/react-player": "^1.6.12",
     "@next-auth/prisma-adapter": "^1.0.7",
+    "@nextui-org/accordion": "^2.0.28",
     "@nextui-org/button": "2.0.26",
     "@nextui-org/card": "^2.0.24",
     "@nextui-org/code": "2.0.24",
