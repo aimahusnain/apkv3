@@ -76,18 +76,19 @@ export default function Header() {
         <NavbarBrand>
           <Logo />
         </NavbarBrand>
-                     {mymenuitems.map((item: MenuItem) => (
-                      <NavbarItem>
-                        <Link
-                          href={item.path}
-                          color="foreground"
-                          size="lg"
-                          className="font-semibold"
-                        >
-                          {item.label}
-                        </Link>
-                      </NavbarItem>
-                    ))}
+        {mymenuitems.map((item: MenuItem, index: number) => (
+  <NavbarItem key={index}>
+    <Link
+      href={item.path}
+      color="foreground"
+      size="lg"
+      className="font-semibold"
+    >
+      {item.label}
+    </Link>
+  </NavbarItem>
+))}
+
         {/* <NavbarItem>
           <Link color="foreground" href="#">
             Features
@@ -121,18 +122,20 @@ export default function Header() {
           </NavbarMenuItem>
         ))} */}
         
-        {mymenuitems.map((item: MenuItem) => (
-                      <NavbarMenuItem className="flex items-center justify-center h-full py-14 text-3xl">
-                        <Link
-                          href={item.path}
-                          color="foreground"
-                          size="lg"
-                          className="font-semibold"
-                        >
-                          {item.label}
-                        </Link>
-                      </NavbarMenuItem>
-                    ))}
+        
+                    {mymenuitems.map((item: MenuItem, index: number) => (
+  <NavbarMenuItem key={index} className="flex items-center justify-center h-full py-14 text-3xl">
+    <Link
+      href={item.path}
+      color="foreground"
+      size="lg"
+      className="font-semibold"
+    >
+      {item.label}
+    </Link>
+  </NavbarMenuItem>
+))}
+
       </NavbarMenu>
     </Navbar>
   );
