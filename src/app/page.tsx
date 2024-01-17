@@ -15,6 +15,8 @@ import FAQ from "../components/blogs/Faq";
 import WhyUseit from "../components/blogs/WhyUseit";
 import { Button } from "@nextui-org/button";
 import OnthisPage from "../components/blogs/OnthisPage";
+import Conclution from "../components/blogs/Conclution";
+import Downloadingsteps from "../components/blogs/Downloadingsteps";
 
 async function extractAllBlogs() {
   try {
@@ -96,15 +98,15 @@ export default function Blogs() {
                 className="justify-center items-center flex flex-col gap-4 
             lg:mx-44 md:mx-16 sm:mx-4"
               >
-                <h1
-                  id="title"
-                  className="sm:text-5xl text-4xl font-bold text-center"
-                >
+                <h1 className="sm:text-5xl text-4xl font-bold text-center">
                   Alight Motion MOD APK 2024 with Pro Features, No Watermark,
                   and Ad-Free Experience!
                 </h1>
 
-                <p className="sm:text-[1.2rem] text-[1rem] sm:leading-[30px] leading-[25px] text-[#a6a6a6] text-center sm:mx-14 mx-2">
+                <p
+                  id="title"
+                  className="sm:text-[1.2rem] text-[1rem] sm:leading-[30px] leading-[25px] text-[#a6a6a6] text-center sm:mx-14 mx-2"
+                >
                   Create stunning motion designs, videos, and animations with
                   the world&apos;s first professional motion graphics toolset
                   for mobile platforms. From keyframe animation to video
@@ -128,7 +130,10 @@ export default function Blogs() {
                     alt="Alight Motion Logo"
                   />
                   <div className="flex flex-col text-left">
-                    <p className="text-3xl uppercase -mt-1 font-semibold">
+                    <p
+                      id="download"
+                      className="text-3xl uppercase -mt-1 font-semibold"
+                    >
                       Download
                     </p>
                     <p className="text-lg">From Here</p>
@@ -141,8 +146,12 @@ export default function Blogs() {
 
               <AlreadyFeatures />
 
+              <FAQ />
+
+              <Downloadingsteps />
+
               <div className="flex flex-col text-center">
-                <FAQ />
+                <Conclution />
 
                 <div className="h-fit flex gap-14 py-8 justify-center">
                   <Tooltip showArrow={true} content="Instagram">

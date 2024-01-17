@@ -8,7 +8,7 @@ import {
 const FAQ = () => {
   return (
     <div className="flex gap-5 items-center justify-center flex-wrap flex-col w-full my-6">
-      <h1 id="faqs" className="text-6xl font-bold my-4 mt-16 text-center">
+      <h1 className="text-6xl font-bold my-4 mt-16 text-center">
         FAQ&apos;s
       </h1>
       <div className="">
@@ -48,7 +48,7 @@ const FAQ = () => {
               the Alight Motion Pro app on your PC to get it running smoothly.
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value="item-4">
+          <AccordionItem id="faqs" value="item-4">
             <AccordionTrigger className="sm:w-96 w-full text-left">
               How To Use an Alight Motion App on Your Phone?
             </AccordionTrigger>
