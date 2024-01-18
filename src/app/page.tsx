@@ -139,9 +139,11 @@ export default function Blogs() {
               </div>
               <div className="w-full sm:px-36 px-0  ">
                 <AlightMotionSpecifications />
+              <div className="lg:mx-52 mx-0">
+              <OnthisPage />
+              </div>
               </div>
               
-              <OnthisPage />
 
               <AlreadyFeatures />
 

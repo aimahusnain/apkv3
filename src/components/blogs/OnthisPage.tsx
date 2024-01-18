@@ -27,8 +27,8 @@ const OnthisPage = () => {
   }
 
   return (
-    <div className="w-72 p-4 flex flex-col gap-2">
-    <Accordion variant="shadow">
+    <div className="p-4 flex flex-col gap-2">
+    <Accordion>
       <AccordionItem key="1" aria-label="table-of-contents" title="On This Page">
       <div className="flex flex-col items-start justify-center gap-4 my-4">
         <button onClick={(e) => handleSmoothScroll(e, "title")} className="text-left text-white/40 hover:text-white">
